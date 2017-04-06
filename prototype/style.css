@@ -91,6 +91,7 @@ ul > li {
 /* LINK / BUTTON */
 a {
  text-decoration: none;
+ outline: none;
  color: #ED2F81;
 }
 
@@ -125,7 +126,7 @@ body > header img {
 #logo {
   position: absolute;
   left: 0;
-  width: 100px;
+  width: 6rem;
   z-index: 10;
 }
 
@@ -143,7 +144,7 @@ body > header img {
 #navigation ul {
   text-transform: uppercase;
   padding-bottom: 1rem;
-  padding-left: 100px;
+  padding-left: 6rem;
 }
 
 #navigation ul > li {
@@ -175,8 +176,8 @@ body > header img {
 
   #navigation ul {
     text-align: left;
-    padding-top: 70px;
-    padding-left: 50px;
+    padding-top: 5rem;
+    padding-left: 3rem;
     display: none;
     background: #ED2F81;
     opacity: 0.9;
@@ -395,4 +396,17 @@ body > footer h2 {
   width: 90%;
   background: #FCFAEA;
   padding: 1rem;
+}
+
+/* LEGAL */
+#legal > .inner {
+  text-transform: uppercase;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#legal span:last-child {
+  margin-left: auto;
 }
