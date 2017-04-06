@@ -29,24 +29,16 @@
 		});
 
 		// mobile nav
-		handleMobileNav();
-	});
-
-	$( window ).resize(function() {
-		handleMobileNav();
-	});
-})(jQuery);
-
-function handleMobileNav() {
-	if ( $("#hamburger").is(":visible") ) {
 		$("#hamburger").click(function() {
 			$("#navigation").find("ul").first().toggle("fast");
 		});
-
 		$("#navigation ul").click(function() {
-			$("#navigation ul").hide();
+			if ( $("#hamburger").is(":visible") ) {
+				$("#navigation ul").hide();
+			} else {
+				$("#navigation ul").show();
+			}
 		});
-	} else {
-		$("#navigation ul").show();
-	}
-}
+
+	});
+})(jQuery);
