@@ -310,6 +310,8 @@ body > header img {
   flex: 0 1 48%;
   border: 0.2rem solid #ED2F81;
   margin-top: 2rem;
+  border: 0.2rem solid #FCFAEA;
+  outline: 0.2rem solid #ED2F81;
 }
 
 #timetable article > ul > li {
@@ -319,7 +321,7 @@ body > header img {
 }
 
 #timetable article > ul > li:nth-child(2n) {
-  background: #ED2F81;
+  background: #F1569A;
   color: #FCFAEA;
 }
 
@@ -342,6 +344,8 @@ body > header img {
   flex: 0 1 30%;
   border: 0.2rem solid #ED2F81;
   margin-top: 2rem;
+  border: 0.2rem solid #FCFAEA;
+  outline: 0.2rem solid #ED2F81;
 }
 
 #tickets article > .price {
