@@ -1,0 +1,30 @@
+{
+  "name": "openairmalans-theme",
+  "version": "1.0.0",
+  "description": "Wordpress theme for the official website of the famous festival in Malans, Switzerland",
+  "license" : "GPL-3.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michiwieland/openairmalans-theme.git"
+  },
+  "author": "Michael Wieland",
+  "contributors": [{
+    "name" : "Marc Wieland"
+  }],
+  "bugs": {
+    "url": "https://github.com/michiwieland/openairmalans-theme/issues"
+  },
+  "homepage": "https://github.com/michiwieland/openairmalans-theme#readme",
+  "dependencies"   : {},
+  "devDependencies": {
+    "gulp" : "^3.9.1",
+    "gulp-autoprefixer" : "^3.1.1",
+    "gulp-concat" : "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-clean-css": "^3.0.4"
+  }
+}

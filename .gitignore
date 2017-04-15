@@ -1,10 +1,28 @@
-*.log
+# File system junk files
+Desktop.ini
+Thumbs.db
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.apdisk
+.fseventsd
 
+# Editor files
+*.sublime-*
+*.swp
+.c9
+.sass-cache/
+
+# NPM
+node_modules
+
+# Database
 mysql/
-wp-content/
 
-/.htaccess
-/license.txt
-/readme.html
-/sitemap.xml
-/sitemap.xml.gz
+# Wordpress
+wp-content/*
+!wp-content/themes
+wp-content/themes/*
+!wp-content/themes/openairmalans/
+wp-content/themes/openairmalans/dist
