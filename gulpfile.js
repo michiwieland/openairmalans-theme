@@ -40,14 +40,9 @@ gulp.task('compile-styles', function () {
         browsers: ['last 2 versions'],
         cascade: false
     }))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(themePath))
   );
-});
-
-gulp.task('optimize-styles', function () {
-  return gulp.src(themePath + '/style.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest(themePath));
 });
 
 // scripts
@@ -57,15 +52,10 @@ gulp.task('compile-scripts', function () {
       assetPath + '/js/vendors/jquery-3.2.1.min.js',
       assetPath + '/js/script.js'
     ])
-    .pipe(concat('script.js'))
+    .pipe(concat('script.min.js'))
+    .pipe(uglify())
     .pipe(gulp.dest(distPath + '/js'))
   );
-});
-
-gulp.task('optimize-scripts', function () {
-  return gulp.src(distPath + '/js/script.js')
-    .pipe(uglify())
-    .pipe(gulp.dest(distPath + '/js/'));
 });
 
 // images
