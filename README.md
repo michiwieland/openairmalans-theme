@@ -7,16 +7,14 @@
 
 ## Getting Started
 
-## Setup Wordpress
+### Setup Wordpress
 1. `git clone https://github.com/michiwieland/openairmalans-theme.git`
 2. `docker-compose up`
 
-## Install Build Tool
+### Setup environment
 1. Install NodeJS: https://nodejs.org/en/download/
 2. Update NPM: `npm install npm@latest -g`
 3. Install Gulp: `npm install gulp-cli -g`
 4. Change to project directory: `/path/to/openairmalans-theme`
 5. Install dependencies: `npm install`
-
-## Develop
-1. 
+6. Build sources: `gulp`
