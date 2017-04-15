@@ -18,3 +18,12 @@
 4. Change to project directory: `/path/to/openairmalans-theme`
 5. Install dependencies: `npm install`
 6. Build sources: `gulp`
+
+## Folder structure
+- Theme folder: /wp-content/themes/openairmalans/
+- Development folder: /wp-content/themes/openairmalans/assets
+- Compiled resources: /wp-content/themes/openairmalans/dist
+
+## Install theme
+1. Run gulp in the root directory: `gulp`
+2. Copy the theme directory except `/assets` to your wordpress `themes` directory.
