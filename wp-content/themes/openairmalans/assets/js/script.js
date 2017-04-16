@@ -2,7 +2,7 @@
 	$(function(){
 
     // Smoth scroll
-    $('move-to-trigger').on('click', 'a', function(event){
+    $('.move-to-trigger').on('click', function(event){
         event.preventDefault();
         $('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top

@@ -73,12 +73,27 @@ section {
   padding-top: 4.5rem;
 }
 
-article > header {
-  background: $pink;
-  color: $yellow-light;
-  font-size: 1.2rem;
-  text-align: center;
+article {
+  border: 0.2rem solid $yellow-light;
+  outline: 0.2rem solid $pink;
+  margin-top: 2rem;
+
+  > header {
+    background: $pink;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: .5rem;
+
+    > a {
+      color: $yellow-light;
+    }
+  }
+
+  > .content {
+    padding: .5rem;
+  }
 }
+
 
 /* TEXT / HEADINGS */
 h1, h2, nav {
@@ -94,7 +109,7 @@ h1 {
 }
 
 h1 span {
-	position: relative;
+  position: relative;
 }
 
 h1 span:before,
@@ -134,7 +149,7 @@ ul > li {
 }
 
 #navigation {
-  background: #ED2F81;
+  background: $pink;
   height: 5rem;
   left: 0;
   position: fixed;

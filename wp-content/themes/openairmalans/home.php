@@ -7,35 +7,14 @@
  *
  */
 get_header(); ?>
-  <section id="front">
-    <a href="#">
-      <img src="<?php echo get_template_directory_uri() . '/dist/images/front.png';?>"
-        alt="Front <?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-    </a>
-    <a id="scroll-down" class="move-to-trigger" href="#artists">
-      <span></span>
-    </a>
-  </section>
-  <section id="news">
 
-  </section>
-  <section id="artists">
-
-  </section>
-  <section id="timetable">
-
-  </section>
-  <section id="tickets">
-
-  </section>
-  <section id="info">
-
-  </section>
-  <section id="impressions">
-
-  </section>
-  <section id="contact">
-
-  </section>
+  <?php get_template_part( 'template-parts/front' ); ?>
+  <?php get_template_part( 'template-parts/news' ); ?>
+  <?php get_template_part( 'template-parts/artists' ); ?>
+  <?php get_template_part( 'template-parts/timetable' ); ?>
+  <?php get_template_part( 'template-parts/tickets' ); ?>
+  <?php get_template_part( 'template-parts/info' ); ?>
+  <?php get_template_part( 'template-parts/impressions' ); ?>
+  <?php get_template_part( 'template-parts/contact' ); ?>
 
 <?php get_footer(); ?>
