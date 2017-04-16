@@ -1,18 +1,15 @@
 /* FRONT */
 #front {
+  align-items: center;
   background: $yellow;
   color: $pink;
+  display: flex;
   height: 100vh;
+  justify-content: center;
   padding-top: 2rem;
 }
 
-#front > .inner {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-#front > .inner img {
+#front img {
   width: 100%;
   padding: 0 1rem;
 }

@@ -8,16 +8,13 @@
  */
 get_header(); ?>
   <section id="front">
-    <div class="inner">
-      <a href="#">
-        <img id="logo"
-          src="<?php echo get_template_directory_uri() . '/dist/images/front.png';?>"
-          alt="Front <?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-      </a>
-      <a id="scroll-down" class="move-to-trigger" href="#artists">
-        <span></span>
-      </a>
-    </div>
+    <a href="#">
+      <img src="<?php echo get_template_directory_uri() . '/dist/images/front.png';?>"
+        alt="Front <?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+    </a>
+    <a id="scroll-down" class="move-to-trigger" href="#artists">
+      <span></span>
+    </a>
   </section>
   <section id="news">
 
