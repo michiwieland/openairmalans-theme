@@ -5,15 +5,14 @@
 
 #tickets article {
   flex: 0 1 30%;
-  border: 0.2rem solid #ED2F81;
+  border: 0.2rem solid $pink;
   margin-top: 2rem;
-  border: 0.2rem solid #FCFAEA;
-  outline: 0.2rem solid #ED2F81;
+  outline: 0.2rem solid $pink;
 }
 
 #tickets article > .price {
   font-size: 4rem;
-  color: #ED2F81;
+  color: $pink;
 }
 
 @media screen and (max-width: 35rem) {

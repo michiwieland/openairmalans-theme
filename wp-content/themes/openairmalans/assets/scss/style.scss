@@ -1,6 +1,7 @@
 /* General Components */
 @import 'base/variables';
 @import 'base/mixins';
+@import 'base/functions';
 @import "base/fonts";
 
 /* Font Awesome */
@@ -63,7 +64,7 @@ body {
 
 .column-layout {
   display: flex;
-  flex: 0 1 50%;
+  flex: 0 1 calculate-width(2);
   flex-flow: column;
   flex-wrap: wrap;
 }

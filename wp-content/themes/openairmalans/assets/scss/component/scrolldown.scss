@@ -7,8 +7,8 @@
 }
 #scroll-down span {
   animation: scrolldown 1.5s infinite;
-  border-left: 0.2rem solid #ED2F81;
-  border-bottom: 0.2rem solid #ED2F81;
+  border-left: 0.2rem solid $pink;
+  border-bottom: 0.2rem solid $pink;
   box-sizing: border-box;
   height: 24px;
   left: 50%;

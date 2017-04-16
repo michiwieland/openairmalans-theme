@@ -17,12 +17,14 @@ gulp.task(
   'default',
   [
     'compile-styles',
+    'copy-precompiled-styles',
     'compile-scripts',
     'compile-fonts',
     'compile-images'
   ],
   function() {
     gulp.watch(assetPath + '/scss/**/*.scss',  ['compile-styles']);
+    gulp.watch(assetPath + '/css/**/*.css',    ['copy-precompiled-styles']);
     gulp.watch(assetPath + '/js/**/*.js',      ['compile-scripts']);
     gulp.watch(assetPath + '/fonts/**/*',      ['compile-fonts']);
     gulp.watch(assetPath + '/images/**/*',     ['compile-images']);
@@ -45,11 +47,18 @@ gulp.task('compile-styles', function () {
   );
 });
 
+// precompiled styles
+gulp.task('copy-precompiled-styles', function () {
+  return gulp.src(assetPath + '/css/**/*')
+    .pipe(gulp.dest(distPath + '/css'));
+});
+
 // scripts
 gulp.task('compile-scripts', function () {
   return (
     gulp.src([
       assetPath + '/js/vendors/jquery-3.2.1.min.js',
+      assetPath + '/js/vendors/lity.js',
       assetPath + '/js/script.js'
     ])
     .pipe(concat('script.min.js'))

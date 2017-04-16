@@ -23,7 +23,7 @@
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #E6EB92;
+  background-color: $yellow;
 }
 
 .artist:hover .overlay {
@@ -31,7 +31,7 @@
 }
 
 .overlay > p {
-  color: #ED2F81;
+  color: $pink;
   position: absolute;
   top: 50%;
   left: 50%;

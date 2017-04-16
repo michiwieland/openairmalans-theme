@@ -57,6 +57,7 @@ add_action( 'after_setup_theme', 'neocode_setup' );
  */
 function neocode_enqueue_assets() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'lity', get_template_directory_uri() . '/dist/css/vendors/lity.min.css' );
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/dist/js/script.min.js');
 }
 add_action( 'wp_enqueue_scripts', 'neocode_enqueue_assets' );
