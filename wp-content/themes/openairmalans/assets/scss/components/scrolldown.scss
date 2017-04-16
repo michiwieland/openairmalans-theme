@@ -1,0 +1,48 @@
+#scroll-down {
+  bottom: 0;
+  left: 0;
+  padding-top: 80px;
+  position: absolute;
+  right: 0;
+}
+#scroll-down span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 0.2rem solid #ED2F81;
+	border-bottom: 0.2rem solid #ED2F81;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: scrolldown 1.5s infinite;
+	animation: scrolldown 1.5s infinite;
+	box-sizing: border-box;
+}
+@-webkit-keyframes scrolldown {
+	0% {
+		-webkit-transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
+}
+@keyframes scrolldown {
+	0% {
+		transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
+}

@@ -1,6 +1,13 @@
-$font-primary: 'Roboto Slab', serif;
-$font-secondary: 'Ranga', cursive;
+/* Colors */
+$dark-grey: #2d3539;
+$pink: #ed2f81;
+$yellow: #e6eb92;
+$yellow-light: #fcfaea;
+$blue: #367bbe;
 
-$primary: #ED2F81;
-$secondary: #E6EB92;
-$tertiary: #357ABE;
+$primary-color: $dark-grey;
+$primary-background: $yellow-light;
+$front-background: $yellow;
+
+/* Sizes */
+$max-width: 65rem;

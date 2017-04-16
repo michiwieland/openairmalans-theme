@@ -1,0 +1,10 @@
+/* VEREIN */
+#contact p {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 35rem) {
+  #contact .column-layout {
+    flex: 1 1 90%;
+  }
+}
