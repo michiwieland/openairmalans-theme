@@ -43,10 +43,14 @@
 body {
   background: $primary-background;
   color: $primary-color;
-  @include custom-font('Roboto Slab', serif);
+  @include custom-font('Raleway', sans-serif);
 }
 
 /* LAYOUT */
+main {
+  margin-top: 5rem;
+}
+
 .inner {
   margin: 0 auto;
   max-width: $max-width;
@@ -55,10 +59,10 @@ body {
 }
 
 .row-layout {
-  align-items: flex-start;
+  align-items: stretch;
   display: flex;
   flex-flow: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 
@@ -76,7 +80,7 @@ section {
 article {
   border: 0.2rem solid $yellow-light;
   outline: 0.2rem solid $pink;
-  margin-top: 2rem;
+  margin: 2rem 1rem 1rem 1rem;
 
   > header {
     background: $pink;
@@ -141,6 +145,15 @@ ul > li {
 }
 
 /* HEADER / NAVIGATION */
+body > header {
+  background: $pink;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
 #logo {
   left: 0;
   position: absolute;
@@ -149,13 +162,7 @@ ul > li {
 }
 
 #navigation {
-  background: $pink;
-  height: 5rem;
-  left: 0;
-  position: fixed;
-  right: 0;
   text-align: center;
-  z-index: 10;
 }
 
 #navigation ul {
@@ -196,14 +203,14 @@ ul > li {
   }
 
   #navigation ul {
-    background: #ED2F81;
+    background: $pink;
     display: none;
     opacity: 0.9;
-    padding: 5rem 3rem 0 0;
+    padding: 5rem 0 1rem 3rem;
     text-align: left;
   }
 
-  #navigation ul > li:not(.social) {
+  #navigation ul > li:not(.social-icon) {
     display: block;
   }
 

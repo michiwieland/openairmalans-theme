@@ -1,47 +1,47 @@
 <section id="news">
   <div class="inner">
-    <?php
-    if ( have_posts() ) :
+    <div class="row-layout">
 
-    	while ( have_posts() ) : the_post(); ?>
+      <?php
+      if ( have_posts() ) :
 
-        <!-- News article -->
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      	while ( have_posts() ) : the_post(); ?>
 
-          <!-- Post Thumbnail -->
-          <?php if ( has_post_thumbnail() ) : ?>
-            <div class="post-thumbnail">
-              <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail( 'neocode-featured-image' ); ?>
+          <!-- News article -->
+          <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+            <!-- Post Thumbnail -->
+            <?php if ( has_post_thumbnail() ) : ?>
+              <div class="post-thumbnail">
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail( 'neocode-featured-image' ); ?>
+                </a>
+              </div>
+            <?php endif; ?>
+
+            <!-- Meta Information -->
+            <header>
+              <a href="<?php the_permalink() ?>">
+                <h2><?php the_title(); ?></h2>
               </a>
+            </header>
+
+            <!-- Post content -->
+            <div class="content">
+              <?php the_excerpt(); ?>
             </div>
-          <?php endif; ?>
+          </article>
 
-          <!-- Meta Information -->
-          <header>
-            <a href="<?php the_permalink() ?>">
-              <h2><?php the_title(); ?></h2>
-            </a>
-          </header>
+        <?php endwhile; ?>
 
-          <!-- Post content -->
-          <div class="content">
-            <?php the_excerpt(); ?>
-          </div>
-        </article>
+      <?php else : ?>
 
-      <?php endwhile;
+        <p><?php _e( 'Aktuell sind keine News vorhanden.', 'neocode' ); ?></p>
 
-    	the_posts_pagination( array(
-    		'prev_text' => '<span class="fa fa-chevron-left">' . __( 'Previous page', 'neocode' ) . '</span>',
-    		'next_text' => __( 'Next page', 'neocode' ) . '<span class="fa fa-chevron-right"></span>',
-    		'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'neocode' ) . ' </span>',
-    	));
+      <?php endif; ?>
+    </div>
 
-    else : ?>
+    <a class="button" href="/?s"><?php _e( 'Alle News Meldungen', 'neocode' ); ?></a>
 
-      <p><?php _e( 'Aktuell sind keine News vorhanden.', 'neocode' ); ?></p>
-
-    <?php endif; ?>
   </div>
 </section>

@@ -14,7 +14,7 @@ get_header(); ?>
   <?php get_template_part( 'template-parts/timetable' ); ?>
   <?php get_template_part( 'template-parts/tickets' ); ?>
   <?php get_template_part( 'template-parts/info' ); ?>
-  <?php get_template_part( 'template-parts/impressions' ); ?>
+  <?php get_template_part( 'template-parts/gallery' ); ?>
   <?php get_template_part( 'template-parts/contact' ); ?>
 
 <?php get_footer(); ?>

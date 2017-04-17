@@ -1,7 +1,10 @@
 .button {
-  border: 0.2rem solid $pink;
-  display: inline-block;
-  margin: 1rem;
-  padding: 0.5rem;
+  background: $pink;
+  color: $yellow-light;
+  display: block;
+  margin: 5rem auto 1rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
   width: 60%;
 }

@@ -39,15 +39,6 @@ function neocode_setup() {
 		'caption',
 	));
 
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-		'gallery',
-		'audio',
-	));
 }
 add_action( 'after_setup_theme', 'neocode_setup' );
 
