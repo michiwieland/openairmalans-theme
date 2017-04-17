@@ -63,6 +63,8 @@ function neocode_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'neocode_enqueue_assets' );
 
 
+add_filter( 'storm_social_icons_type', create_function( '', 'return "icon-sign";' ) );
+
 
 /**
  * Conditionally displays a metabox when used as a callback in the 'show_on_cb' cmb2_box parameter

@@ -30,7 +30,7 @@
 @import "pages/timetable";
 @import "pages/tickets";
 @import "pages/info";
-@import "pages/impressions";
+@import "pages/gallery";
 @import "pages/contact";
 
 /*GENERAL */
@@ -167,6 +167,11 @@ ul > li {
   display: inline-block;
   font-size: 2rem;
   margin: 1rem 1rem 0;
+}
+
+/* Menu Social Icons Plugin*/
+#navigation ul > li.social-icon {
+  font-size: 1rem;
 }
 
 #navigation ul > li > a {
