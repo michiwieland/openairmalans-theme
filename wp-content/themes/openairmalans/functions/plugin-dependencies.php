@@ -80,6 +80,13 @@ class PluginDependencies {
   			'required'  => true
   		),
 
+      // A faster, easier and more powerful way to build themes.
+      array(
+        'name'      => 'Timber',
+        'slug'      => 'timber-library',
+        'required'  => true
+      ),
+
   	);
 
   	tgmpa( $plugins );
