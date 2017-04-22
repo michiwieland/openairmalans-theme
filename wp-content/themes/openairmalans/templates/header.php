@@ -13,8 +13,6 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-  <link rel="shortcut icon" href="<?= get_template_directory_uri() ?>/dist/images/favicon.png" type="image/png">
-  <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/dist/styles/main.css">
 
   <!-- START HEAD -->
   <?php wp_head(); ?>
