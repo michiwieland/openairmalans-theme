@@ -1,57 +1,41 @@
 <?php
-/**
- * Openair Malans functions and definitions
- *
- */
-
+namespace Neocode\Theme;
 
 /**
- * Sets up theme defaults
+ *  Constants
  */
-function neocode_setup() {
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+// Path
+define( 'THEME_DIR',            __DIR__ );
+define( 'THEME_TEMPLATES_DIR',  THEME_DIR . '/templates/' );
+define( 'THEME_FUNCTIONS_DIR',  THEME_DIR . '/functions/' );
+define( 'THEME_DIR_URI',        get_stylesheet_directory_uri() );
 
-	// Do not use a hard-coded title tag
-	add_theme_support( 'title-tag' );
+// Include files
+require_once ( THEME_FUNCTIONS_DIR . '/admin.php' );
+require_once ( THEME_FUNCTIONS_DIR . '/post-type.php' );
+require_once ( THEME_FUNCTIONS_DIR . '/setup.php' );
+require_once ( THEME_FUNCTIONS_DIR . '/helpers.php' );
 
-	// Add excerpt support
-	add_post_type_support( 'page', 'excerpt' );
-
-	// Enable featured image
-	add_theme_support( 'post-thumbnails' );
-
-	// Image sizes
-	add_image_size( 'neocode-featured-image', 500, 500, true );
-	add_image_size( 'neocode-thumbnail-avatar', 100, 100, true );
-
-	// Register navigation
-	register_nav_menus( array(
-		'top'    => __( 'Top Menu', 'neocode' )
-	));
-
-	// Basic HTML5 support
-	add_theme_support( 'html5', array(
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	));
-
-}
-add_action( 'after_setup_theme', 'neocode_setup' );
+// Init class
+new Admin();
+new CPT();
+new Setup();
 
 
 /**
- * Enqueue all assets
+ *  Borrowed from Sage-Theme and customized
  */
-function neocode_enqueue_assets() {
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
-	wp_enqueue_style( 'lity', get_template_directory_uri() . '/dist/css/vendors/lity.min.css' );
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/dist/js/script.min.js');
-}
-add_action( 'wp_enqueue_scripts', 'neocode_enqueue_assets' );
 
+// Fix get_stylesheet_directory() function
+add_filter('stylesheet', function ($stylesheet) {
+    return dirname($stylesheet);
+});
 
-add_filter( 'storm_social_icons_type', create_function( '', 'return "icon-sign";' ) );
+// Load WP default templates from /templates folder
+add_action('after_switch_theme', function () {
+    $stylesheet = get_option('stylesheet');
+    if (basename($stylesheet) !== 'templates') {
+        update_option('stylesheet', $stylesheet . '/templates');
+    }
+});

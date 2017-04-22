@@ -6,11 +6,19 @@
  *
  */
 ?>
+
 <!DOCTYPE html>
+<html <?php language_attributes() ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="shortcut icon" href="<?= get_template_directory_uri() ?>/dist/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/dist/styles/main.css">
+
+  <!-- START HEAD -->
   <?php wp_head(); ?>
+  <!-- END HEAD -->
 </head>
 <body <?php body_class(); ?>>
 
@@ -19,11 +27,12 @@
 
     <!-- NAVIGATION -->
     <nav id="navigation">
+
       <div class="inner">
         <!-- LOGO -->
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
   				<img id="logo"
-            src="<?php echo get_template_directory_uri() . '/dist/images/logo.png';?>"
+            src="<?= THEME_DIR_URI . '/dist/images/logo.png';?>"
             alt="Logo <?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
         </a>
 
@@ -36,6 +45,9 @@
           'menu_id'        => 'top-menu',
         ));?>
       </div>
+
     </nav>
+
   </header>
+
   <main>

@@ -1,3 +1,9 @@
+<?php
+/**
+ * Template Name: News
+ */
+?>
+
 <section id="news">
   <div class="inner">
     <div class="row-layout">
