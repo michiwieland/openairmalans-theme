@@ -13,6 +13,14 @@ const themePath = 'wp-content/themes/openairmalans';
 const distPath = themePath + '/dist';
 const assetPath = themePath + '/assets';
 
+gulp.task('watch', function(){
+  gulp.watch(assetPath + '/scss/**/*.scss',  ['compile-styles']);
+  gulp.watch(assetPath + '/css/**/*.css',    ['copy-precompiled-styles']);
+  gulp.watch(assetPath + '/js/**/*.js',      ['compile-scripts']);
+  gulp.watch(assetPath + '/fonts/**/*',      ['compile-fonts']);
+  gulp.watch(assetPath + '/images/**/*',     ['compile-images']);
+});
+
 gulp.task(
   'default',
   [
@@ -21,14 +29,7 @@ gulp.task(
     'compile-scripts',
     'compile-fonts',
     'compile-images'
-  ],
-  function() {
-    gulp.watch(assetPath + '/scss/**/*.scss',  ['compile-styles']);
-    gulp.watch(assetPath + '/css/**/*.css',    ['copy-precompiled-styles']);
-    gulp.watch(assetPath + '/js/**/*.js',      ['compile-scripts']);
-    gulp.watch(assetPath + '/fonts/**/*',      ['compile-fonts']);
-    gulp.watch(assetPath + '/images/**/*',     ['compile-images']);
-  }
+  ]
 );
 
 // styles
@@ -43,7 +44,7 @@ gulp.task('compile-styles', function () {
         cascade: false
     }))
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest(themePath))
+    .pipe(gulp.dest(distPath + '/css'))
   );
 });
 
