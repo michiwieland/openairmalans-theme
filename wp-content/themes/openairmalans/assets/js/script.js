@@ -1,14 +1,6 @@
 (function( $ ) {
 	$(function(){
 
-    // Smoth scroll
-    $('.move-to-trigger').on('click', function(event){
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 500);
-    });
-
     // Lity lightbox
 		$(document).on('lity:ready', function(event, lightbox) {
 			const lityContent = $(event.currentTarget.activeElement).find('.lity-content');
