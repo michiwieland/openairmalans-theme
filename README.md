@@ -28,3 +28,12 @@
 ## Install theme
 1. Run gulp in the root directory: `gulp`
 2. Copy the theme directory except the `/assets` folder to your wordpress `/themes` directory.
+
+## Connect to the database
+Open connection with the tool of your choice:
+
+  - Host: `localhost`
+  - Username: `root`
+  - Password: `wp`
+  - Port: `3306`
+  - Database: `wordpress`
