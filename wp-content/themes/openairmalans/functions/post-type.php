@@ -23,14 +23,14 @@ class CPT {
             'all_items'           => 'Alle Künstler',
             'view_item'           => 'Künstler ansehen',
             'add_new'             => 'Neuer Künstler',
-            'add_new_item'        => 'Neuee Künstler hinzufügen',
+            'add_new_item'        => 'Neue Künstler hinzufügen',
             'edit_item'           => 'Künstler bearbeiten',
             'search_items'        => 'Künstler suchen',
             'not_found'           => 'Nichts gefunden',
         );
         $args = array(
             'labels'              => $labels,
-            'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+            'supports'            => array( 'thumbnail', 'revisions' ),
             'hierarchical'        => true,
             'public'              => true,
             'show_ui'             => true,
