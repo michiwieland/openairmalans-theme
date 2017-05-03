@@ -1,5 +1,13 @@
 <?php
-if (defined('ABSPATH')) {
-    update_option('template', get_option('template') . '/templates');
-}
-die('Templates are not located here - sorry');
+
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * It is used to display a page when nothing more specific matches a query.
+ *
+ */
+
+get_header(); ?>
+
+<?php get_footer(); ?>

@@ -16,6 +16,7 @@ define( 'THEME_DIR_URI',        get_template_directory_uri() );
 require_once ( THEME_FUNCTIONS_DIR . '/admin.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/post-type.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/setup.php' );
+require_once ( THEME_FUNCTIONS_DIR . '/template.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/helpers.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/plugin-dependencies.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/custom-fields.php' );
@@ -24,14 +25,19 @@ require_once ( THEME_FUNCTIONS_DIR . '/custom-fields.php' );
 new Admin();
 new CPT();
 new Setup();
+new Template();
 new PluginDependencies();
 new CustomFields();
+
+// Some migration script - only temporary
+update_option('stylesheet', get_option('template') );
 
 
 /**
  *  Borrowed from Sage-Theme and customized
  */
 
+/*
 // Fix get_stylesheet_directory() function
 add_filter('stylesheet', function ($stylesheet) {
     return dirname($stylesheet);
@@ -44,3 +50,4 @@ add_action('after_switch_theme', function () {
         update_option('stylesheet', $stylesheet . '/templates');
     }
 });
+*/
