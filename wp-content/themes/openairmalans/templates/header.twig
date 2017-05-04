@@ -1,0 +1,54 @@
+{#
+<?php
+/**
+ * The header
+ *
+ * This is the template that displays all of the <head> section and everything up until <main>
+ *
+ */
+?>
+#}
+
+<!DOCTYPE html>
+<html {{ site.language_attributes }}>
+<head>
+  <meta charset="{{ site.charset }}">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- START HEAD -->
+  {{ function('wp_head') }}
+  <!-- END HEAD -->
+</head>
+<body {{ body_class }}>
+
+  <!-- HEADER -->
+  <header>
+
+    <!-- NAVIGATION -->
+    <nav id="navigation">
+
+      <div class="inner">
+
+        <!-- LOGO -->
+        <a href="{{ site.url|e('esc_url'); }}">
+  				<img id="logo"
+            src="<?= THEME_DIR_URI . '/dist/images/logo.png';?>"
+            alt="Logo {{ site.name }}">
+        </a>
+
+        <!-- MOBILE HAMBURGER -->
+        <i id="hamburger" class="fa fa-bars" aria-hidden="true"></i>
+
+        <!-- MENU -->
+        <?php wp_nav_menu( array(
+          'theme_location' => 'top',
+          'menu_id'        => 'top-menu',
+        ));?>
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main>
