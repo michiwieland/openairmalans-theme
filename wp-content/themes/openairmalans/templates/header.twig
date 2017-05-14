@@ -1,12 +1,8 @@
 {#
-<?php
-/**
  * The header
  *
  * This is the template that displays all of the <head> section and everything up until <main>
  *
- */
-?>
 #}
 
 <!DOCTYPE html>
@@ -31,7 +27,7 @@
       <div class="inner">
 
         <!-- LOGO -->
-        <a href="{{ site.url|e('esc_url'); }}">
+        <a href="{{ site.url|e('esc_url') }}">
   				<img id="logo"
             src="<?= THEME_DIR_URI . '/dist/images/logo.png';?>"
             alt="Logo {{ site.name }}">
@@ -41,10 +37,6 @@
         <i id="hamburger" class="fa fa-bars" aria-hidden="true"></i>
 
         <!-- MENU -->
-        <?php wp_nav_menu( array(
-          'theme_location' => 'top',
-          'menu_id'        => 'top-menu',
-        ));?>
       </div>
 
     </nav>
