@@ -17,6 +17,7 @@ require_once ( THEME_FUNCTIONS_DIR . '/admin.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/post-type.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/setup.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/template.php' );
+require_once ( THEME_FUNCTIONS_DIR . '/twig-extend.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/helpers.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/plugin-dependencies.php' );
 require_once ( THEME_FUNCTIONS_DIR . '/custom-fields.php' );

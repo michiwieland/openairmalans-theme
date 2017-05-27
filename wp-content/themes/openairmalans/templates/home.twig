@@ -1,5 +1,19 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	Startseite
+
+	{# posts|print_r #}
+	{% for post in posts %}
+
+		- {{ post.title }}
+
+		{#function('get_the_permalink', post.ID)#}
+
+		{{ ''|twg_get_template_name }}
+
+		{# post|print_r }}
+		{# function('Neocode\Theme\Helpers::get_template_name') #}
+
+	{% endfor %}
+
 {% endblock %}

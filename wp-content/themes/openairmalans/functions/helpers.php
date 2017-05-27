@@ -3,16 +3,23 @@ namespace Neocode\Theme;
 
 class Helpers {
 
-	function get_template_name() {
+	function get_template_name( $template_type = null ) {
 
-	    // get template name (template-xxx.php)
-	    $template_type = basename( get_page_template() );
+		if ( !is_null($path) ) {
+		    // get template name (template-xxx.php)
+		    $template_type = basename( get_page_template() );
+		}
+
 	    // remove template- at start
 	    $template_type = substr( $template_type, 9 );
 	    // remove .php at end
 	    $template_type = substr_replace( $template_type, '', -4 );
 
-	    return $template_type;
+	    if ( !empty($template_type) ) {
+	    	return $template_type;
+	    } else {
+	    	return 'default';
+	    }
 
 	}
 

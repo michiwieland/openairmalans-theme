@@ -17,6 +17,8 @@ class Template {
 		// Set default twig directory
 		\Timber::$dirname = 'templates';
 
+		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
+
 	}
 
 	// Twig Error Message
@@ -31,6 +33,22 @@ class Template {
 
 		return get_stylesheet_directory() . '/static/no-timber.html';
 
+	}
+
+
+	function twg_get_template_name() {
+
+	    # edit this according to the implementation of your class:
+	    return Helpers::get_template_name();
+	    //return get_the_ID();
+	    //return 'sdfgs';
+	}
+
+	function add_to_twig($twig) {
+	    // this is where you can add your own fuctions to twig
+	    $twig->addExtension(new \Twig_Extension_StringLoader());
+	    $twig->addFilter('twg_get_template_name', new \Twig_Filter_Function( array( $this, 'twg_get_template_name' ) ));
+	    return $twig;
 	}
 
 }

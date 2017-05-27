@@ -1,0 +1,16 @@
+{# Load each section by template #}
+{% extends "base.twig" %}
+
+{% block content %}
+
+	{# Loop every page as section #}
+	{% for post in posts %}
+
+		{% include ["section/section-#{post.template}.twig"] %}
+
+	{% endfor %}
+
+{% endblock %}
+
+
+
