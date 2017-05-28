@@ -1,19 +1,14 @@
 /* TICKETS */
-#tickets {
+.ticket {
   text-align: center;
-}
+  flex: 1 1 25%;
 
-#tickets article {
-  flex: 0 1 30%;
-}
+  @media #{$medium} {
+    flex: 1 1 100%;
+  }
 
-#tickets article > .price {
-  font-size: 4rem;
-  color: $pink;
-}
-
-@media screen and (max-width: 35rem) {
-  #tickets article {
-    flex: 1 1 90%;
+  .price {
+    font-size: 4rem;
+    color: $pink;
   }
 }
