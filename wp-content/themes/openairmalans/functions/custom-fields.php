@@ -14,6 +14,8 @@ class CustomFields {
 
 	function crb_register_custom_fields() {
 		include_once( THEME_DIR . '/includes/artist-fields.php' );
+		include_once( THEME_DIR . '/includes/timetable-fields.php' );
+		include_once( THEME_DIR . '/includes/ticket-fields.php' );
 	}
 
 	/**

@@ -18,8 +18,13 @@ class Template {
 		\Timber::$dirname = 'templates';
 
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
-
+    add_filter( 'timber_context', array( $this, 'add_to_context') );
 	}
+
+  function add_to_context($data) {
+    $data['menu'] = new \TimberMenu();
+    return $data;
+  }
 
 	// Twig Error Message
     function twig_message() {

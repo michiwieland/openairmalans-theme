@@ -1,7 +1,38 @@
 {% extends "section.twig" %}
 
+{# overwrite title block in base.twig #}
+{% block title %}
+
+  <h1><span>{{ post.title }}</span></h1>
+  <p>{{post.content}}</p>
+
+{% endblock %}
+
 {% block content %}
 
+  {% set tickets = function( 'carbon_get_post_meta', post.ID, 'crb_tickets', 'complex' ) %}
 
+	{% if tickets %}
+
+		{% for ticket in tickets %}
+
+        <article>
+          <header>
+            <h2>{{ ticket.ticket_day }}</h2>
+          </header>
+
+          <p class="price">{{ ticket.ticket_price }}</p>
+          <p>{{function( 'carbon_get_post_meta', post.ID, 'crb_ticket_info')}}</p>
+          <a class="button" hreflang="de" rel="external" target="_blank"
+             href="{{ ticket.ticket_link }}">Kaufen</a>
+        </article>
+
+		{% endfor %}
+
+	{% else %}
+
+		<p>{{ __( 'Die Ticket Preise werden bald veröffentlicht.', 'neocode' ) }}</p>
+
+	{% endif %}
 
 {% endblock %}
