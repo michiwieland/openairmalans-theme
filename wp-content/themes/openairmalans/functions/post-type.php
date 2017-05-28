@@ -7,7 +7,7 @@ class CPT {
 
         add_action( 'init', array( $this, 'cpt_news') );
         add_action( 'init', array( $this, 'cpt_artists') );
-    	add_action( 'init', array( $this, 'cpt_impressions') );
+        add_action( 'init', array( $this, 'cpt_impressions') );
         add_action( 'init', array( $this, 'cpt_infos') );
     }
 
@@ -116,7 +116,7 @@ class CPT {
           'show_in_nav_menus'   => true,
           'show_in_admin_bar'   => true,
           'menu_position'       => 23,
-          'menu_icon'           => 'dashicons-format-gallery',
+          'menu_icon'           => 'dashicons-info',
           'can_export'          => true,
           'has_archive'         => true,
           'exclude_from_search' => false,
