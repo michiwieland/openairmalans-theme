@@ -16,12 +16,7 @@ class Helpers {
 	    // remove .php at end
 	    $template_type = substr_replace( $template_type, '', -4 );
 
-	    // Return a default template when no template is set
-	    if ( !empty($template_type) ) {
-	    	return $template_type;
-	    } else {
-	    	return 'default';
-	    }
+	    return $template_type;
 
 	}
 
