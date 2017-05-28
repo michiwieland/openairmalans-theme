@@ -1,11 +1,26 @@
 /*GENERAL */
 body {
-  background: $yellow-light;
+  background-color: $yellow-light;
   color: $dark-grey;
   @include custom-font('Raleway', sans-serif);
 }
 
 /* LAYOUT */
+.inner {
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.row-layout {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 main {
   margin-top: 5rem;
 }
@@ -14,26 +29,6 @@ section {
   padding-top: 4.5rem;
 }
 
-article {
-  border: 0.2rem solid $yellow-light;
-  outline: 0.2rem solid $pink;
-  margin: 2rem 1rem 1rem 1rem;
-
-  > header {
-    background: $pink;
-    font-size: 1.2rem;
-    text-align: center;
-    padding: .5rem;
-
-    > a {
-      color: $yellow-light;
-    }
-  }
-
-  > .content {
-    padding: .5rem;
-  }
-}
 
 
 /* TEXT / HEADINGS */
@@ -74,11 +69,6 @@ a {
   color: $pink;
   outline: none;
   text-decoration: none;
-}
-
-/* LISTINGS */
-ul > li {
-  list-style-type: none;
 }
 
 /* HEADER / NAVIGATION */

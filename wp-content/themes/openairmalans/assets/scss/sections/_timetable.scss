@@ -1,25 +1,22 @@
 /* TIMETABLE */
-#timetable article {
-  flex: 0 1 48%;
-}
+.timetable {
+  flex: 1 1 40%;
 
-#timetable article > ul > li {
-  margin: 0;
-  padding: 0.5rem;
-  color: $pink;
-}
+  @media #{$medium} {
+    flex: 1 1 100%;
+  }
 
-#timetable article > ul > li:nth-child(2n) {
-  background: $pink-light;
-  color: $yellow-light;
-}
+  > ul > li {
+    padding: 0.5rem;
+    color: $pink;
 
-#timetable article > ul > li > span:first-child {
-  margin-right: 1rem;
-}
+    &:nth-child(2n) {
+      background: $pink-light;
+      color: $yellow-light;
+    }
 
-@media screen and (max-width: 35rem) {
-  #timetable article {
-    flex: 1 1 90%;
+    > span:first-child {
+      margin-right: 1rem;
+    }
   }
 }

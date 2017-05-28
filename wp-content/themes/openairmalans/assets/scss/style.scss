@@ -8,6 +8,7 @@
 @import "base/fonts";
 @import "base/reset";
 @import "base/base";
+@import "base/components";
 
 /* Font Awesome */
 @import "vendor/fontawesome/variables";
@@ -23,12 +24,6 @@
 @import "vendor/fontawesome/stacked";
 @import "vendor/fontawesome/icons";
 @import "vendor/fontawesome/screen-reader";
-
-/* Components */
-@import "component/button";
-@import "component/scrolldown";
-@import "component/lightbox";
-@import "component/layout";
 
 /* Sections */
 @import "sections/front";
