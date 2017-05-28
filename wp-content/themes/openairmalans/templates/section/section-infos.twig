@@ -1,0 +1,23 @@
+<section id="infos">
+	<div class="inner">
+		<h1><span>{{ post.title }}</span></h1>
+
+		<div class="row-layout">
+
+		{% for post in infos %}
+
+			<article>
+
+				<h2>{{post.title}}</h2>
+
+				<p>{{post.content}}</p>
+
+			</article>
+
+		{% endfor %}
+
+		{# TODO <p><?php _e( 'Die Künstler werden bald veröffentlicht.', 'neocode' ); ?></p> #}
+
+		</div>
+  </div>
+</section>
