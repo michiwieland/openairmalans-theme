@@ -1,8 +1,9 @@
-<section id="artists">
-	<div class="inner">
-		<h1><span>{{ post.title }}</span></h1>
+{# Load each section by template #}
+{% extends "section.twig" %}
 
-		<div class="row-layout">
+{% block content %}
+
+	{% if artists %}
 
 		{% for post in artists %}
 
@@ -21,8 +22,10 @@
 
 		{% endfor %}
 
-		{# TODO <p><?php _e( 'Die Künstler werden bald veröffentlicht.', 'neocode' ); ?></p> #}
+	{% else %}
 
-		</div>
-  	</div>
-</section>
+		<p>{{ __( 'Die Künstler werden bald veröffentlicht.', 'neocode' ) }}</p>
+
+	{% endif %}
+
+{% endblock %}
