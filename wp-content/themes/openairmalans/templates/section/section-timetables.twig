@@ -2,6 +2,39 @@
 
 {% block content %}
 
+  {% set days = function( 'carbon_get_post_meta', post.ID, 'crb_timetable_days', 'complex' ) %}
 
+	{% if days %}
+
+		{% for day in days %}
+
+      <article>
+        <header>
+          <h2>{{day.timetable_day}}</h2>
+        </header>
+
+
+        {% if day.crb_timetable_entries %}
+
+          <ul>
+            {% for entry in day.crb_timetable_entries %}
+              <li>
+                <span>{{entry.timetable_entry_from}} - {{entry.timetable_entry_to}}</span>
+                <span>{{entry.timetable_entry_act}}</span>
+              </li>
+            {% endfor %}
+          </ul>
+
+        {% endif %}
+
+      </article>
+
+		{% endfor %}
+
+	{% else %}
+
+		<p>{{ __( 'Der Zeitplan werden bald veröffentlicht.', 'neocode' ) }}</p>
+
+	{% endif %}
 
 {% endblock %}
