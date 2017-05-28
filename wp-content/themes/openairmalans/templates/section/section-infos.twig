@@ -1,23 +1,30 @@
-<section id="infos">
-	<div class="inner">
-		<h1><span>{{ post.title }}</span></h1>
+{% extends "section.twig" %}
 
-		<div class="row-layout">
+{% block content %}
 
-		{% for post in infos %}
+	{% if infos %}
 
-			<article>
+		<div class="column-2">
 
-				<h2>{{post.title}}</h2>
+			{% for post in infos %}
 
-				<p>{{post.content}}</p>
+				<article class="info">
 
-			</article>
+					<h2>{{post.title}}</h2>
 
-		{% endfor %}
+					<p>{{post.content}}</p>
 
-		{# TODO <p><?php _e( 'Die Künstler werden bald veröffentlicht.', 'neocode' ); ?></p> #}
+				</article>
+
+			{% endfor %}
 
 		</div>
-  </div>
-</section>
+
+
+	{% else %}
+
+		<p>{{ __( 'Die Informationen werden bald veröffentlicht.', 'neocode' ) }}</p>
+
+	{% endif %}
+
+{% endblock %}
