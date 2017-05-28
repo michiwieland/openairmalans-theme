@@ -9,15 +9,13 @@
 
 			<div class="artist">
 
-			  {# <?php the_post_thumbnail('full', [
-			    'class' => 'image',
-			    'alt' => carbon_get_post_meta( get_the_ID(), 'artist-name' ); ]); ?>#}
+				<img src="{{post.thumbnail.src}}" class="image" alt="{{post.title}}" />
 
-				<a href="{{ function( 'carbon_get_post_meta', post.ID, 'artist-url' ) }}"
+				<a href="{{ function( 'carbon_get_post_meta', post.ID, 'artist_url' ) }}"
 			     	class="overlay"
-			     	data-lity data-title="{{ function( 'carbon_get_post_meta', post.ID, 'artist-name' ) }}"
-			     	data-desc="{{ function( 'carbon_get_post_meta', post.ID, 'artist-description' ) }}">
-			    	<p>{{ function( 'carbon_get_post_meta', post.ID, 'artist-name' ) }}</p>
+			     	data-lity data-title="{{post.title}}"
+			     	data-desc="{{ function( 'carbon_get_post_meta', post.ID, 'artist_description' ) }}">
+			    	<p>{{post.title}}</p>
 			  	</a>
 
 			</div>
