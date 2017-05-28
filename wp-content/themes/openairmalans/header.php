@@ -30,7 +30,7 @@
         <!-- LOGO -->
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
   				<img id="logo"
-            src="<?= THEME_DIR_URI . '/dist/images/logo.png';?>"
+            src="<?php THEME_DIR_URI . '/dist/images/logo.png'?>"
             alt="Logo <?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
         </a>
 
