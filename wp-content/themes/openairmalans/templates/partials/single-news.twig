@@ -1,0 +1,25 @@
+<article id="post-{{ post.id }}" class="{{ post.class }}">
+
+	{# post|print_r #}
+
+	{#
+  <!-- Post Thumbnail -->
+  <?php if ( has_post_thumbnail() ) : ?>
+    <div class="post-thumbnail">
+      <a href="<?php the_permalink(); ?>">
+        <?php the_post_thumbnail( 'neocode-featured-image' ); ?>
+      </a>
+    </div>
+  <?php endif; ?>
+  	#}
+
+  <!-- Meta Information -->
+  <header>
+  	<h2>{{ post.title }}</h2>
+  </header>
+
+  <!-- Post content -->
+  <div class="content">
+    {{ post.content }}
+  </div>
+</article>

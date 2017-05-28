@@ -1,6 +1,10 @@
 {# Load each section by template #}
 {% extends "base.twig" %}
 
+{% block heading %}
+	{% include 'partials/front.twig' %}
+{% endblock %}
+
 {% block content %}
 
 	{# Loop every page as section #}

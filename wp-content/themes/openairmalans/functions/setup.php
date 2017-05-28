@@ -22,6 +22,8 @@ class Setup {
 
 		add_filter( 'storm_social_icons_type', create_function( '', 'return "icon-sign";' ) );
 
+		add_filter( 'admin_menu', array( $this, 'remove_menus' ) );
+
 	}
 
 	/**
@@ -136,5 +138,29 @@ class Setup {
 		return $src;
 
 	}
+
+
+	/**
+     * Remove pages from admin menu;
+     * http://codex.wordpress.org/Function_Reference/remove_menu_page
+     */
+
+    function remove_menus() {
+
+		remove_menu_page( 'edit.php' ); // Posts
+
+        // Remove pages for editors
+        if( current_user_can( 'editor' ) ) {
+            remove_submenu_page( 'themes.php', 'themes.php' ); // Appearance -> Theme
+            global $submenu;
+            unset( $submenu['themes.php'][6] ); // Appearance -> Customize
+        }
+
+        // Remove pages for non-administrators
+        if( ! current_user_can( 'administrator' ) ) {
+            remove_menu_page( 'tools.php' );
+        }
+
+    }
 
 }

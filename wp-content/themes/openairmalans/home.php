@@ -24,8 +24,9 @@ $impressions_args = array(
 	'posts_per_page' => -1,
 	'order' => 'ASC',
 	'orderby' => 'menu_order'
-);
+); ?>
 
+<?php
 $context = Timber::get_context();
 $context['posts'] = new Timber\PostQuery( $args, 'Neocode\Theme\OnepagePost' );
 $context['artists'] = Timber::get_posts( $artists_args );

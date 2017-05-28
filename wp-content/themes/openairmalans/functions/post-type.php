@@ -5,6 +5,7 @@ class CPT {
 
     function __construct() {
 
+        add_action( 'init', array( $this, 'cpt_news') );
         add_action( 'init', array( $this, 'cpt_artists') );
     	add_action( 'init', array( $this, 'cpt_impressions') );
 
@@ -13,6 +14,44 @@ class CPT {
     /**
      * Custom Post Type
      */
+
+    // News
+    function cpt_news() {
+
+        $labels = array(
+            'name'                => 'Beiträge',
+            'singular_name'       => 'Beitrag',
+            'menu_name'           => 'Neuigkeiten',
+            'all_items'           => 'Alle Beiträge',
+            'view_item'           => 'Beitrag ansehen',
+            'add_new'             => 'Neuer Beitrag',
+            'add_new_item'        => 'Neuer Beitrag hinzufügen',
+            'edit_item'           => 'Beitrag bearbeiten',
+            'search_items'        => 'Beitrag suchen',
+            'not_found'           => 'Nichts gefunden',
+        );
+        $args = array(
+            'labels'              => $labels,
+            'supports'            => array( 'title', 'editor', 'revisions' ),
+            'hierarchical'        => true,
+            'public'              => true,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 21,
+            'menu_icon'           => 'dashicons-media-text',
+            'can_export'          => true,
+            'has_archive'         => true,
+            'exclude_from_search' => false,
+            'publicly_queryable'  => true,
+            'rewrite'             => true,
+            'rewrite'             => array('slug'=>'news','with_front'=>true),
+            'capability_type'     => 'post',
+        );
+        register_post_type( 'news', $args );
+
+    }
 
     // Artist
     function cpt_artists() {
