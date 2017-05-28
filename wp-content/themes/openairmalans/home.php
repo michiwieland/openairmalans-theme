@@ -34,10 +34,19 @@ $infos_args = array(
 	'orderby' => 'menu_order',
 );
 
+// Grab latest news
+$news_args = array(
+	'post_type' => 'news',
+	'posts_per_page' => 3,
+	'order' => 'ASC',
+	'orderby' => 'date',
+);
+
 $context = Timber::get_context();
 $context['posts'] = new Timber\PostQuery( $args, 'Neocode\Theme\OnepagePost' );
 $context['artists'] = Timber::get_posts( $artists_args );
 $context['infos'] = Timber::get_posts( $infos_args );
 $context['impressions'] = Timber::get_posts( $impressions_args );
+$context['news'] = Timber::get_posts( $news_args );
 
 Timber::render('onepager.twig', $context);
