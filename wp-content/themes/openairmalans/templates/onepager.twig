@@ -3,10 +3,12 @@
 
 {% block content %}
 
+	{# posts|print_r #}
+
 	{# Loop every page as section #}
 	{% for post in posts %}
 
-		{% include ["section/section-#{post.template}.twig"] %}
+		{% include ['section/section-'~post.template~'.twig'] %}
 
 	{% endfor %}
 

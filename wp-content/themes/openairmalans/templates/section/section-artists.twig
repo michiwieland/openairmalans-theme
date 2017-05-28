@@ -1,4 +1,38 @@
 {# post|print_r #}
 
-- {{ post.title }}
-- {{ post.template }}
+{# artists|print_r #}
+
+<section id="artists">
+	<div class="inner">
+		<h1><span>{{ post.title }}</span></h1>
+
+		<div class="row-layout">
+
+		{% for post in artists %}
+
+			{# post._artist_name #}
+			{# function( 'carbon_get_post_meta', post.ID, 'artist_name' ) #}
+			{# post|print_r #}
+
+			<div class="artist">
+
+			  {# <?php the_post_thumbnail('full', [
+			    'class' => 'image',
+			    'alt' => carbon_get_post_meta( get_the_ID(), 'artist-name' ); ]); ?>#}
+
+				<a href="{{ function( 'carbon_get_post_meta', post.ID, 'artist-url' ) }}"
+			     	class="overlay"
+			     	data-lity data-title="{{ function( 'carbon_get_post_meta', post.ID, 'artist-name' ) }}"
+			     	data-desc="{{ function( 'carbon_get_post_meta', post.ID, 'artist-description' ) }}">
+			    	<p>{{ function( 'carbon_get_post_meta', post.ID, 'artist-name' ) }}</p>
+			  	</a>
+
+			</div>
+
+		{% endfor %}
+
+		{# <p><?php _e( 'Die Künstler werden bald veröffentlicht.', 'neocode' ); ?></p> #}
+
+		</div>
+  	</div>
+</section>
