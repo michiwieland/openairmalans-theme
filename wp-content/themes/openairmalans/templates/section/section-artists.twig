@@ -1,7 +1,3 @@
-{# post|print_r #}
-
-{# artists|print_r #}
-
 <section id="artists">
 	<div class="inner">
 		<h1><span>{{ post.title }}</span></h1>
@@ -10,28 +6,22 @@
 
 		{% for post in artists %}
 
-			{# post._artist_name #}
-			{# function( 'carbon_get_post_meta', post.ID, 'artist_name' ) #}
-			{# post|print_r #}
-
 			<div class="artist">
 
-			  {# <?php the_post_thumbnail('full', [
-			    'class' => 'image',
-			    'alt' => carbon_get_post_meta( get_the_ID(), 'artist-name' ); ]); ?>#}
+				<img src="{{post.thumbnail.src}}" class="image" alt="{{post.title}}" />
 
-				<a href="{{ function( 'carbon_get_post_meta', post.ID, 'artist-url' ) }}"
+				<a href="{{ function( 'carbon_get_post_meta', post.ID, 'artist_url' ) }}"
 			     	class="overlay"
-			     	data-lity data-title="{{ function( 'carbon_get_post_meta', post.ID, 'artist-name' ) }}"
-			     	data-desc="{{ function( 'carbon_get_post_meta', post.ID, 'artist-description' ) }}">
-			    	<p>{{ function( 'carbon_get_post_meta', post.ID, 'artist-name' ) }}</p>
+			     	data-lity data-title="{{post.title}}"
+			     	data-desc="{{ function( 'carbon_get_post_meta', post.ID, 'artist_description' ) }}">
+			    	<p>{{post.title}}</p>
 			  	</a>
 
 			</div>
 
 		{% endfor %}
 
-		{# <p><?php _e( 'Die Künstler werden bald veröffentlicht.', 'neocode' ); ?></p> #}
+		{# TODO <p><?php _e( 'Die Künstler werden bald veröffentlicht.', 'neocode' ); ?></p> #}
 
 		</div>
   	</div>
