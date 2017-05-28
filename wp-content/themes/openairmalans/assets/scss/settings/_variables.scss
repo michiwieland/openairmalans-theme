@@ -2,14 +2,16 @@
 $dark-grey: #2d3539;
 $pink: #ed2f81;
 $pink-light: #ed3182;
-$yellow: #e6eb92;
+$yellow: #edea90;
 $yellow-light: #fcfaea;
 $blue: #367bbe;
 $white: #fff;
 
-$primary-color: $dark-grey;
-$primary-background: $yellow-light;
-$front-background: $yellow;
+/* Device Width */
+$phablet-width: 24em;
+$tablet-width: 46.8em;
+$laptop-width: 50em;
+$desktop-width: 73em;
 
 /* Sizes */
 $max-width: 70rem;

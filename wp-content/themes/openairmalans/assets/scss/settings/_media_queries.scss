@@ -1,0 +1,12 @@
+ // Usage: @media #{$medium} { .. }
+$phone: "(max-width: #{$phablet-width})";
+$phablet: "(min-width: #{$phablet-width}) and (max-width: #{$tablet-width})";
+$tablet: "(min-width: #{$tablet-width}) and (max-width: #{$laptop-width})";
+$laptop: "(min-width: #{$laptop-width}) and (max-width: #{$desktop-width})";
+$desktop: "(min-width: #{$desktop-width})";
+
+// Shortcuts
+$large: #{$laptop, $desktop};
+$normal: #{$tablet};
+$medium: #{$phone, $phablet};
+$small: #{$phone};
