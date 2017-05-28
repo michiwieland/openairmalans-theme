@@ -17,6 +17,8 @@ class Admin {
 
         add_action( 'init', array( $this, 'register_menus' ) );
 
+        add_filter( 'theme_page_templates', array( $this, 'register_templates' ) );
+
     }
 
 
@@ -115,6 +117,27 @@ class Admin {
             	'top' => __('Top Menu', 'neocode')
             )
         );
+    }
+
+
+    /**
+     *  Hardcode templates
+     */
+
+    function register_templates( $pages_templates ) {
+
+        $templates = array (
+            'template-artists.php'  => 'Künstler',
+            'template-impressions.php'  => 'Impressionen',
+            'template-infos.php'  => 'Infos',
+            'template-news.php'  => 'Neuigkeiten',
+            'template-tickets.php'  => 'Tickets',
+            'template-timetables.php'  => 'Zeitplan',
+            'template-verein.php'  => 'Verein'
+        );
+
+        return array_merge( $pages_templates, $templates );
+
     }
 
 }
