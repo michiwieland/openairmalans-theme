@@ -8,15 +8,10 @@
 	box-sizing: border-box;
 }
 
-html, body {
-	background-color: rgb(255, 255, 255);
-}
-
 html {
 	overflow-y: scroll;
 	font-size: 100%;
 	line-height: 1.25;
-	color: rgb(0, 0, 0);
 	text-size-adjust: none;
 	text-rendering: optimizeLegibility;
 	//-webkit-font-smoothing: antialiased;
@@ -39,14 +34,8 @@ figcaption {
 	display: block;
 }
 
-p,
-ul {
-	margin-bottom: 1rem;
-}
-
 ul {
 	list-style: none;
-	padding-left: 25px;
 }
 
 li {
