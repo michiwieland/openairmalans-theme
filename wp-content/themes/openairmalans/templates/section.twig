@@ -1,6 +1,9 @@
 <section id="{{ post.slug }}">
 	<div class="inner">
-		<h1><span>{{ post.title }}</span></h1>
+
+		{% block title %}
+			<h1><span>{{ post.title }}</span></h1>
+		{% endblock %}
 
 		<div class="row-layout">
 
@@ -9,5 +12,6 @@
 			{% endblock %}
 
 		</div>
+
 	</div>
 </section>
