@@ -84,9 +84,9 @@ class CPT {
           'rewrite'             => false,
           //'rewrite'             => array('slug'=>'angebot','with_front'=>true),
           'capability_type'     => 'page',
-        )
+        );
+        register_post_type( 'infos', $args );
     }
-    register_post_type( 'infos', $args );
 
     // Impression
     function cpt_impressions() {
