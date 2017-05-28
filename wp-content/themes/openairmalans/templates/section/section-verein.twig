@@ -1,0 +1,10 @@
+{% extends "section.twig" %}
+
+{# overwrite title block in base.twig #}
+{% block title %}
+
+  <h1><span>{{ post.title }}</span></h1>
+
+  <p>{{post.content}}</p>
+
+{% endblock %}
