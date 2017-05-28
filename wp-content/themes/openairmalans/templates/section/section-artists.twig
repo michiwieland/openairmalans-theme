@@ -1,18 +1,11 @@
-{# post|print_r #}
+{# Load each section by template #}
+{% extends "section.twig" %}
 
-{# artists|print_r #}
+{% block content %}
 
-<section id="artists">
-	<div class="inner">
-		<h1><span>{{ post.title }}</span></h1>
-
-		<div class="row-layout">
+	{% if artists %}
 
 		{% for post in artists %}
-
-			{# post._artist_name #}
-			{# function( 'carbon_get_post_meta', post.ID, 'artist_name' ) #}
-			{# post|print_r #}
 
 			<div class="artist">
 
@@ -31,8 +24,10 @@
 
 		{% endfor %}
 
-		{# <p><?php _e( 'Die Künstler werden bald veröffentlicht.', 'neocode' ); ?></p> #}
+	{% else %}
 
-		</div>
-  	</div>
-</section>
+		<p>{{ __( 'Die Künstler werden bald veröffentlicht.', 'neocode' ) }}</p>
+
+	{% endif %}
+
+{% endblock %}

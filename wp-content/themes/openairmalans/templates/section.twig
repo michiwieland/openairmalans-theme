@@ -1,0 +1,13 @@
+<section id="{{ post.slug }}">
+	<div class="inner">
+		<h1><span>{{ post.title }}</span></h1>
+
+		<div class="row-layout">
+
+			{% block content %}
+				{# This content is replaced by the template #}
+			{% endblock %}
+
+		</div>
+	</div>
+</section>
