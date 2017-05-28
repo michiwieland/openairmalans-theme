@@ -37,6 +37,14 @@
         <i id="hamburger" class="fa fa-bars" aria-hidden="true"></i>
 
         <!-- MENU -->
+      	<ul class="main-nav">
+    	    {% for item in menu.get_items %}
+            <li class="nav-main-item {{item.classes | join(' ')}}">
+                <a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
+            </li>
+    	    {% endfor %}
+      	</ul>
+
       </div>
 
     </nav>
