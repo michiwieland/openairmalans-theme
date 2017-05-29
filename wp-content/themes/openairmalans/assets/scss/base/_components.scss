@@ -61,25 +61,26 @@ article {
 
 
 /* SCROLL DOWN */
-#scroll-down {
+.scroll-down {
   bottom: 0;
   left: 0;
   padding-top: 80px;
   position: absolute;
   right: 0;
-}
-#scroll-down span {
-  animation: scrolldown 1.5s infinite;
-  border-left: 0.2rem solid $pink;
-  border-bottom: 0.2rem solid $pink;
-  box-sizing: border-box;
-  height: 24px;
-  left: 50%;
-  margin-left: -12px;
-	position: absolute;
-	top: 0;
-  transform: rotate(-45deg);
-	width: 24px;
+
+  span {
+    animation: scrolldown 1.5s infinite;
+    border-left: 0.2rem solid $pink;
+    border-bottom: 0.2rem solid $pink;
+    box-sizing: border-box;
+    height: 24px;
+    left: 50%;
+    margin-left: -12px;
+  	position: absolute;
+  	top: 0;
+    transform: rotate(-45deg);
+  	width: 24px;
+  }
 }
 
 @keyframes scrolldown {

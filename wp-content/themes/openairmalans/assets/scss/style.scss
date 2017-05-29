@@ -7,8 +7,11 @@
 /* General components */
 @import "base/fonts";
 @import "base/reset";
-@import "base/base";
 @import "base/components";
+@import "base/base";
+@import "base/header";
+@import "base/footer";
+
 
 /* Font Awesome */
 @import "vendor/fontawesome/variables";

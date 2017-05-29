@@ -10,6 +10,15 @@
 			lityContent.append('<p class="lity-descr">' + description + '</p>');
 		});
 
+		// smoth scroll
+		$('.move-to-trigger').on('click', function(event){
+			event.preventDefault();
+			console.log("sadf");
+			$('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    	}, 500);
+		});
+
 		// mobile nav
 		$("#hamburger").click(function() {
 			$("#navigation").find("ul").first().toggle("fast");
