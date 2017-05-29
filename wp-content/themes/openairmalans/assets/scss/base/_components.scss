@@ -26,13 +26,22 @@ article {
 /* BUTTON */
 .button {
   background: $pink;
-  color: $yellow-light;
+  color: $yellow;
+  border: 0.1rem solid $yellow;
   display: block;
   margin: 2rem auto;
   padding: 1.5rem 2rem;
   text-align: center;
   text-transform: uppercase;
+  transition: all 0.3s;
   width: 60%;
+
+
+  &:hover {
+    background: $yellow;
+    color: $pink;
+    border: 0.1rem solid $pink;
+  }
 }
 
 /* LIGTHBOX */

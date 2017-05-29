@@ -51,6 +51,12 @@ section {
     .button {
       background-color: $yellow;
       color: $pink;
+
+      &:hover {
+        background-color: $pink;
+        color: $yellow;
+        border: 0.1rem solid $yellow;
+      }
     }
   }
 }
@@ -122,7 +128,8 @@ body > header {
 
 #navigation ul {
   text-transform: uppercase;
-  padding: 0 0 1rem 6rem;
+  padding-left: 6rem;
+  line-height: 3.5rem;
 }
 
 #navigation ul > li {
