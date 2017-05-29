@@ -6,26 +6,32 @@
 
     {% for post in news %}
 
-      {% if post.thumbnail %}
 
-        <!-- Post Thumbnail -->
-        <div class="post-thumbnail">
-          <a href="{{ post.link }}">
-            <img src="{{ post.thumbnail.src('neocode-featured-image') }}" alt="{{ post.title }}">
-          </a>
+      <article>
+
+        {% if post.thumbnail %}
+
+          <!-- Post Thumbnail -->
+          <div class="post-thumbnail">
+            <a href="{{ post.link }}">
+              <img src="{{ post.thumbnail.src('neocode-featured-image') }}" alt="{{ post.title }}">
+            </a>
+          </div>
+
+        {% endif %}
+
+        <!-- Meta Information -->
+        <header>
+          <h2>{{ post.title }}</h2>
+        </header>
+
+        <!-- Post content -->
+        <div class="content">
+          {{ post.content }}
         </div>
 
-      {% endif %}
+      </article>
 
-      <!-- Meta Information -->
-      <header>
-        <h2>{{ post.title }}</h2>
-      </header>
-
-      <!-- Post content -->
-      <div class="content">
-        {{ post.content }}
-      </div>
 
       {% endfor %}
 

@@ -1,11 +1,10 @@
 /* ARTICLE */
 article {
-  border: 0.2rem solid $yellow-light;
+  border: 0.2rem solid $yellow;
   outline: 0.2rem solid $pink;
   margin: 2rem 1rem 1rem 1rem;
-  border-radius: 1rem;
   text-align: left;
-  
+
   > header {
     color: $yellow-light;
     background: $pink;
@@ -29,7 +28,7 @@ article {
   background: $pink;
   color: $yellow-light;
   display: block;
-  margin: 3rem auto 1rem;
+  margin: 2rem auto;
   padding: 1.5rem 2rem;
   text-align: center;
   text-transform: uppercase;

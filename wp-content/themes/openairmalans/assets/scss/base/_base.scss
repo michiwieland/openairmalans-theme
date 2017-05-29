@@ -1,7 +1,7 @@
 /*GENERAL */
 body {
-  background-color: $yellow-light;
-  color: $dark-grey;
+  background-color: $yellow;
+  color: $black;
   @include custom-font('Raleway', sans-serif);
 }
 
@@ -33,8 +33,26 @@ main {
 }
 
 section {
-  padding-top: 4.5rem;
+  padding: 4.5rem 0;
   text-align: center;
+
+  &:nth-child(2n) {
+    background-color: $pink;
+
+    h1 {
+      color: $yellow;
+
+      span:before,
+      span::after {
+        border-color: $yellow;
+      }
+    }
+
+    .button {
+      background-color: $yellow;
+      color: $pink;
+    }
+  }
 }
 
 
@@ -59,7 +77,9 @@ h1 span {
 h1 span:before,
 h1 span::after {
   content: "";
-  border-top: 0.3rem dotted $pink;
+  border: 0.3rem;
+  border-style: dotted;
+  border-color: $pink;
 	position: absolute;
   top: 50%;
 	width: $max-width;

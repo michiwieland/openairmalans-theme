@@ -8,11 +8,11 @@
 
   > ul > li {
     padding: 0.5rem;
-    color: $pink;
+    color: $yellow;
 
-    &:nth-child(2n) {
-      background: $pink-light;
-      color: $yellow-light;
+    &:nth-child(odd) {
+      background: $yellow;
+      color: $pink;
     }
 
     > span:first-child {
