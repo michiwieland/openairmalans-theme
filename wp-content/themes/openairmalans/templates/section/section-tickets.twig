@@ -22,7 +22,7 @@
 			  </header>
 
 			  <p class="price">{{ ticket.ticket_price }}</p>
-			  <p>{{function( 'carbon_get_post_meta', post.ID, 'crb_ticket_info')}}</p>
+			  <p class="info">{{function( 'carbon_get_post_meta', post.ID, 'crb_ticket_info')}}</p>
 			  <a class="button" hreflang="de" rel="external" target="_blank"
 			     href="{{ ticket.ticket_link }}">Kaufen</a>
 			</article>
