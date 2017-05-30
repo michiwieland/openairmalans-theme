@@ -108,7 +108,7 @@ class CPT {
         );
         $args = array(
           'labels'              => $labels,
-          'supports'            => array( 'title', 'thumbnail', 'revisions' ),
+          'supports'            => array( 'title', 'editor' ),
           'hierarchical'        => true,
           'public'              => true,
           'show_ui'             => true,
