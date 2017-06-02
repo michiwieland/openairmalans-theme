@@ -17,13 +17,6 @@ class PluginDependencies {
   	// plugins from wordpress.org
   	$plugins = array(
 
-  		// Social icons for wordpress menu
-  		array(
-  			'name'      => 'Menu Social Icons',
-  			'slug'      => 'menu-social-icons',
-  			'required'  => true
-  		),
-
   		// Custom fields
   		array(
   			'name'      => 'Carbon Fields',

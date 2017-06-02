@@ -39,9 +39,31 @@
         <!-- MENU -->
       	<ul class="main-nav">
     	    {% for item in menu.get_items %}
-            <li class="nav-main-item {{item.classes | join(' ')}}">
-                <a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
-            </li>
+
+            {# note: this is kind of a hack!
+               please make your changes in all of the following condition blocks
+            #}
+
+            {% if 'twitter' in item.get_link %}
+              <li class="nav-main-item social-icon {{item.classes | join(' ')}}">
+                <a class="social-icon" href="{{item.get_link}}">
+                  <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                </a>
+              </li>
+            {% elseif 'facebook' in item.get_link %}
+              <li class="nav-main-item social-icon {{item.classes | join(' ')}}">
+                <a class="social-icon" href="{{item.get_link}}">
+                  <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+              </li>
+            {% else %}
+              <li class="nav-main-item {{item.classes | join(' ')}}">
+                <a class="nav-main-link move-to-trigger" href="{{item.get_link}}">
+                  {{item.title}}
+                </a>
+              </li>
+            {% endif %}
+
     	    {% endfor %}
       	</ul>
 

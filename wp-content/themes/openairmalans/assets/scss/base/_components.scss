@@ -10,7 +10,7 @@ article {
     background: $pink;
     font-size: 1.2rem;
     text-align: center;
-    padding: .5rem;
+    padding: 1rem;
 
     > a {
       color: $yellow-light;
@@ -27,7 +27,7 @@ article {
 .button {
   background: $pink;
   color: $yellow;
-  border: 0.1rem solid $yellow;
+  border: 0.1rem solid $pink;
   display: block;
   margin: 2rem auto;
   padding: 1.5rem 2rem;

@@ -26,10 +26,6 @@ body > header {
         font-size: 2rem;
         margin: 1rem 1rem 0;
 
-        &.social-icon {
-          font-size: 1rem;
-        }
-
         a {
           color: #E6EB92;
         }
@@ -47,28 +43,27 @@ body > header {
       right: 0;
       z-index: 10;
     }
-  }
-}
 
+    @media #{$small, $medium} {
+      #hamburger {
+        display: block;
+      }
 
-@media screen and (max-width: $max-width) {
-  #hamburger {
-    display: block;
-  }
+      ul {
+        background: $pink;
+        display: none;
+        opacity: 0.9;
+        padding: 5rem 0 1rem 3rem;
+        text-align: left;
 
-  #navigation ul {
-    background: $pink;
-    display: none;
-    opacity: 0.9;
-    padding: 5rem 0 1rem 3rem;
-    text-align: left;
-  }
+        li:not(.social-icon) {
+          display: block;
+        }
 
-  #navigation ul > li:not(.social-icon) {
-    display: block;
-  }
-
-  #navigation ul > li > a {
-    display: block;
+        li > a {
+          display: block;
+        }
+      }
+    }
   }
 }

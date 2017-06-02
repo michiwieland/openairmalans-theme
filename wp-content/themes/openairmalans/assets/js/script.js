@@ -23,11 +23,11 @@
 		$("#hamburger").click(function() {
 			$("#navigation").find("ul").first().toggle("fast");
 		});
-		$("#navigation ul").click(function() {
+		$(".main-nav").click(function() {
 			if ( $("#hamburger").is(":visible") ) {
-				$("#navigation ul").hide();
+				$(".main-nav").hide();
 			} else {
-				$("#navigation ul").show();
+				$(".main-nav").show();
 			}
 		});
 	});
