@@ -10,7 +10,7 @@
     padding: 1rem;
     color: $yellow;
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       background: $yellow;
       color: $pink;
     }

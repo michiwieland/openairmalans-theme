@@ -39,6 +39,7 @@ section {
 
   &:nth-child(2n) {
     background-color: $pink;
+    color: $white;
 
     h1 {
       color: $yellow;
@@ -47,6 +48,16 @@ section {
       span::after {
         border-color: $yellow;
       }
+    }
+
+    article {
+      border: 0.2rem solid $pink;
+      outline: 0.2rem solid $yellow;
+
+       > header {
+         color: $pink;
+         background: $yellow;
+       }
     }
 
     .button {
@@ -62,6 +73,28 @@ section {
   }
 }
 
+article {
+  border: 0.2rem solid $yellow;
+  outline: 0.2rem solid $pink;
+  margin: 2rem 1rem 1rem 1rem;
+  text-align: left;
+
+  > header {
+    color: $yellow-light;
+    background: $pink;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+
+    > a {
+      color: $yellow-light;
+    }
+  }
+
+  > .content {
+    padding: .5rem;
+  }
+}
 
 /* TEXT / HEADINGS */
 h1, h2, nav {

@@ -24,7 +24,7 @@ body > header {
       > li {
         display: inline-block;
         font-size: 2rem;
-        margin: 1rem 1rem 0;
+        margin: 1rem .5rem 0;
 
         a {
           color: #E6EB92;
@@ -44,7 +44,7 @@ body > header {
       z-index: 10;
     }
 
-    @media #{$small, $medium} {
+    @media screen and (max-width: $max-width) { 
       #hamburger {
         display: block;
       }

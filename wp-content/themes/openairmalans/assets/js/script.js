@@ -15,7 +15,11 @@
 				e.preventDefault();
 
 				var link = $(this).attr('href');
-				var sectionSlug = '#' + getSlug(link);
+				var sectionSlug = link; // some links already link to an anchor
+				if (sectionSlug.indexOf('#') === -1) {
+					sectionSlug = '#' + getSlug(link);
+				}
+
 				if ( $(sectionSlug).length > 0 ) {
 					// move to anchor
 					$('html, body').animate({
