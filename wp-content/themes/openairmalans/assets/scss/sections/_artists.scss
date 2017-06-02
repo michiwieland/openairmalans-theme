@@ -5,12 +5,8 @@
   overflow: hidden;
   position: relative;
 
-  @media #{$medium} {
+  @media #{$small, $medium} {
     flex: 0 1 40%;
-  }
-
-  @media #{$small} {
-    flex: 1 1 40%;
   }
 
   > .overlay {
