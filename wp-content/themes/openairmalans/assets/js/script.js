@@ -10,14 +10,30 @@
 			lityContent.append('<p class="lity-descr">' + description + '</p>');
 		});
 
-		// smoth scroll
-		$('.move-to-trigger').on('click', function(event){
-			event.preventDefault();
-			console.log("sadf");
-			$('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    	}, 500);
-		});
+		// onepage navigation hack
+    $('.nav-main-link').on('click', function(e){
+				e.preventDefault();
+
+				var link = $(this).attr('href');
+				var sectionSlug = '#' + getSlug(link);
+				if ( $(sectionSlug).length > 0 ) {
+					// move to anchor
+					$('html, body').animate({
+							scrollTop: $( sectionSlug ).offset().top - 30
+					}, 500);
+
+				} else {
+					// we are in a detail page
+					var newURL = window.location.protocol + "//" + window.location.host + "/" + sectionSlug;
+					window.location.replace(newURL);
+				}
+    });
+
+		function getSlug(fullLink) {
+			var linkParts = fullLink.split('/');
+   		return linkParts[linkParts.length - 2];
+		}
+
 
 		// mobile nav
 		$("#hamburger").click(function() {

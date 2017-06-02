@@ -2,29 +2,39 @@
 
 {% block content %}
 
-	{% if posts %}
+	<section>
 
-		{% for post in posts %}
+		<div class="inner">
 
-			{% include 'partials/single-news.twig' %}
+			<div class="row-layout">
 
-		{% endfor %}
+			{% if posts %}
 
-	{% else %}
+				{% for post in posts %}
 
-    	<p>{{ __( 'Zurzeit sind keine Neuigkeiten verfügbar', 'neocode' ) }}</p>
+					{% include 'partials/single-news.twig' %}
 
-  	{% endif %}
+				{% endfor %}
 
-	{% if pagination.prev %}
-		<a href="{{pagination.prev.link}}" class="prev {{pagination.prev.link|length ? '' : 'invisible'}}">
-			<span class="fa fa-chevron-left">{{ __( 'Vorheriger Post', 'neocode' ) }}</a>
-    {% endif %}
+			{% else %}
 
-    {% if pagination.next %}
-    	<a href="{{pagination.next.link}}" class="next {{pagination.next.link|length ? '' : 'invisible'}}">
-    		{{ __( 'Nächster Post', 'neocode' ) }}<span class="fa fa-chevron-right"></span>
-    	</a>
-    {% endif %}
+		    	<p>{{ __( 'Zurzeit sind keine Neuigkeiten verfügbar', 'neocode' ) }}</p>
+
+		  	{% endif %}
+
+			{% if pagination.prev %}
+				<a href="{{pagination.prev.link}}" class="prev {{pagination.prev.link|length ? '' : 'invisible'}}">
+					<span class="fa fa-chevron-left">{{ __( 'Vorheriger Post', 'neocode' ) }}</a>
+		    {% endif %}
+
+		    {% if pagination.next %}
+		    	<a href="{{pagination.next.link}}" class="next {{pagination.next.link|length ? '' : 'invisible'}}">
+		    		{{ __( 'Nächster Post', 'neocode' ) }}<span class="fa fa-chevron-right"></span>
+		    	</a>
+		    {% endif %}
+
+			</div>
+		</div>
+	</section>
 
 {% endblock %}
