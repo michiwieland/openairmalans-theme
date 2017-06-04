@@ -1,32 +1,37 @@
 /* FRONT */
 .front {
-  align-items: center;
   background: $yellow;
   color: $pink;
-  display: flex;
   height: 100vh;
   padding-top: 0rem;
 
-  img {
-    width: 90%;
-    padding: 0 1rem;
-  }
-
-  .volunteer {
-    position: absolute;
-    top: 6rem;
-    right: 2rem;
-    background: $pink;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
+  .inner {
     display: flex;
     align-items: center;
-    justify-content: center;
-    transform: rotate(15deg);
+    height: 100%;
 
-    > a {
-      color: $yellow;
+    img {
+      width: 90%;
+      padding: 0 1rem;
+    }
+
+    .volunteer {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: $pink;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(15deg);
+
+      > a {
+        color: $yellow;
+      }
     }
   }
+
 }
