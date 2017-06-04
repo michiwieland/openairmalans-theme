@@ -1,13 +1,13 @@
-.news {
-  flex: 1 0 30%;
+.single-news {
+  flex: 1 1 100%;
+  color: $pink;
 
-  @media #{$small} {
-    flex: 0 1 100%;
+  > header > a {
+    color: $yellow-light;
   }
 
   .post-thumbnail {
-    max-height: 12.5rem;
-    overflow: hidden;
+    max-height: 37rem;
 
     > a {
       display: block;

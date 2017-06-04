@@ -39,7 +39,7 @@ section {
 
   &:nth-child(2n) {
     background-color: $pink;
-    color: $white;
+    color: $yellow-light;
 
     h1 {
       color: $yellow;
@@ -80,19 +80,14 @@ article {
   text-align: left;
 
   > header {
-    color: $yellow-light;
     background: $pink;
     font-size: 1.2rem;
     text-align: center;
     padding: 1rem;
-
-    > a {
-      color: $yellow-light;
-    }
   }
 
   > .content {
-    padding: .5rem;
+    padding: 1rem 0.5rem 0.5rem;
   }
 }
 

@@ -11,7 +11,9 @@
 
         <!-- Meta Information -->
         <header>
-          <h2>{{ post.title }}</h2>
+          <a href="{{ post.link }}">
+            <h2>{{ post.title }}</h2>
+          </a>
         </header>
 
         {% if post.thumbnail %}
@@ -19,7 +21,7 @@
           <!-- Post Thumbnail -->
           <div class="post-thumbnail">
             <a href="{{ post.link }}">
-              <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(200) }}" alt="{{ post.title }}">
+              <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(300, 200, 'center') }}" alt="{{ post.title }}">
             </a>
           </div>
 
@@ -27,7 +29,7 @@
 
         <!-- Post content -->
         <div class="content">
-          {{ post.get_preview(40) }}
+          {{ post.get_preview(20) }}
         </div>
 
       </article>
@@ -35,7 +37,6 @@
 
       {% endfor %}
 
-      <a class="button" href="{{ function( 'get_post_type_archive_link', 'news' ) }}">{{ __( 'Alle News Meldungen', 'neocode' ) }}</a>
 
   {% else %}
 
@@ -43,4 +44,8 @@
 
   {% endif %}
 
+{% endblock %}
+
+{% block appendix %}
+  <a class="button" href="{{ function( 'get_post_type_archive_link', 'news' ) }}">{{ __( 'Alle News Meldungen', 'neocode' ) }}</a>
 {% endblock %}
