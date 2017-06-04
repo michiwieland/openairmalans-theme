@@ -1,8 +1,11 @@
 (function( $ ) {
 	$(function(){
 
-    // Lity lightbox
-		$(document).on('lity:ready', function(event, lightbox) {
+		/*
+		 * LITY LIGHTBOX
+		 *
+		 */
+		 $(document).on('lity:ready', function(event, lightbox) {
 			const lityContent = $(event.currentTarget.activeElement).find('.lity-content');
 			const title = !!lightbox.opener().data('title') ? lightbox.opener().data('title') : "";
 			const description = !!lightbox.opener().data('desc') ? lightbox.opener().data('desc') : "";
@@ -10,7 +13,12 @@
 			lityContent.append('<p class="lity-descr">' + description + '</p>');
 		});
 
-		// onepage navigation hack
+
+		/*
+		 * ONE PAGE NAVIGATION
+		 * Default: scroll to anchor, if we are on the front page
+		 * Use http link, if we are on a detail page (e.g news)
+		 */
     $('.nav-main-link').on('click', function(e){
 				e.preventDefault();
 
@@ -39,16 +47,41 @@
 		}
 
 
-		// mobile nav
+		/*
+		 * MOBILE MENU
+		 */
+		 
+		// toggle mobile menu
 		$("#hamburger").click(function() {
-			$("#navigation").find("ul").first().toggle("fast");
-		});
-		$(".main-nav").click(function() {
-			if ( $("#hamburger").is(":visible") ) {
-				$(".main-nav").hide();
+			if ($(".main-nav").is(":visible")){
+					$(".main-nav").hide("fast");
 			} else {
-				$(".main-nav").show();
+					$(".main-nav").show("fast");
 			}
 		});
+
+		// close mobile menu if user clicks anywhere
+		$(document).click(function(e){
+			if (mobileMenuVisible() && !$(e.target).is("#hamburger")) {
+				$(".main-nav").hide("fast");
+			}
+		});
+
+		// maintain correct visibility while resizing
+		$( window ).resize(function() {
+        if (!isMobile()) {
+						$(".main-nav").show();
+        } else {
+            $(".main-nav").hide();
+        }
+    });
+
+		function isMobile() {
+        return $("#hamburger").is(":visible");
+    }
+
+    function mobileMenuVisible() {
+        return isMobile() && $(".main-nav").is(":visible");
+    }
 	});
 })(jQuery);
