@@ -2,6 +2,9 @@
 namespace Neocode\Theme;
 use Timber;
 
+require_once ( THEME_FUNCTIONS_DIR . '/twig-extend.php' );
+
+
 // Onepage Query
 $args = array(
 	'post_type' => 'page',

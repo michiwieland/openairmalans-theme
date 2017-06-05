@@ -3,14 +3,12 @@ namespace Neocode\Theme;
 
 class Template {
 
-    function __construct() {
+  function __construct() {
 
     	// Check if Timber exist
 		if ( ! class_exists( 'Timber' ) ) {
 			add_action( 'admin_notices', array( $this, 'twig_message' ) );
-
 			add_filter('template_include', array( $this, 'no_timber' ) );
-
 			return;
 		}
 
