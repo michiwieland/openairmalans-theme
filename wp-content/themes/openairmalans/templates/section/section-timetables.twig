@@ -1,5 +1,13 @@
 {% extends "section.twig" %}
 
+{# overwrite title block in base.twig #}
+{% block title %}
+
+  <h1><span>{{ post.title }}</span></h1>
+  <p>{{post.content}}</p>
+
+{% endblock %}
+
 {% block content %}
 
   {% set days = function( 'carbon_get_post_meta', post.ID, 'crb_timetable_days', 'complex' ) %}
