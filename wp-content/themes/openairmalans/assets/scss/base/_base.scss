@@ -34,8 +34,12 @@ main {
 }
 
 section {
-  padding: 4.5rem 0;
   text-align: center;
+  padding: 4.5rem 0;
+
+  &:first-child {
+    padding: 0;
+  }
 
   &:nth-child(2n) {
     background-color: $pink;

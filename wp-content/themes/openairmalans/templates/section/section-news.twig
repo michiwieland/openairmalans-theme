@@ -11,18 +11,14 @@
 
         <!-- Meta Information -->
         <header>
-          <a href="{{ post.link }}">
-            <h2>{{ post.title }}</h2>
-          </a>
+          <h2>{{ post.title }}</h2>
         </header>
 
         {% if post.thumbnail %}
 
           <!-- Post Thumbnail -->
           <div class="post-thumbnail">
-            <a href="{{ post.link }}">
-              <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(300, 200, 'center') }}" alt="{{ post.title }}">
-            </a>
+            <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(300, 200, 'center') }}" alt="{{ post.title }}">
           </div>
 
         {% endif %}
