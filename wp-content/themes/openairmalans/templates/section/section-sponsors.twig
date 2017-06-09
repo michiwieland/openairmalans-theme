@@ -1,0 +1,82 @@
+{% extends "section.twig" %}
+
+{# overwrite title block in base.twig #}
+{% block title %}
+
+  <h1><span>{{ post.title }}</span></h1>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="sponsors">
+
+    {% set mainSponsors = function( 'carbon_get_post_meta', post.ID, 'crb_main_sponsors', 'complex' ) %}
+
+    {% if mainSponsors %}
+
+      <h2>Hauptsponsor</h2>
+      <div class="sponsor-section">
+      {% for mainSponsor in mainSponsors %}
+
+        <div class="sponsor">
+          <a href="{{ mainSponsor.crb_main_sponsors_url }}" target="_blank" >
+
+            {% set image = function( 'wp_get_attachment_image_src', mainSponsor.crb_main_sponsors_logo, 'full' ) %}
+
+            <img src="{{ image[0] }}" alt="{{ mainSponsor.crb_main_sponsors_name }}" />
+          </a>
+        </div>
+
+      {% endfor %}
+      </div>
+
+    {% endif %}
+
+    {% set presenters = function( 'carbon_get_post_meta', post.ID, 'crb_presenter', 'complex' ) %}
+
+    {% if presenters %}
+
+      <h2>Presenter</h2>
+      <div class="sponsor-section">
+      {% for presenter in presenters %}
+
+        <div class="sponsor">
+          <a href="{{ presenter.crb_presenter_url }}" target="_blank" >
+
+            {% set image = function( 'wp_get_attachment_image_src', presenter.crb_presenter_logo, 'full') %}
+
+            <img src="{{ image[0] }}" alt="{{ presenter.crb_presenter_name }}" />
+          </a>
+        </div>
+
+      {% endfor %}
+      </div>
+
+    {% endif %}
+
+    {% set sponsors = function( 'carbon_get_post_meta', post.ID, 'crb_sponsors', 'complex' ) %}
+
+    {% if sponsors %}
+
+      <h2>Sponsoren</h2>
+      <div class="sponsor-section">
+      {% for sponsor in sponsors %}
+
+        <div class="sponsor">
+          <a href="{{ sponsor.crb_sponsors_url }}" target="_blank" >
+
+            {% set image = function( 'wp_get_attachment_image_src', sponsor.crb_sponsors_logo, 'full' ) %}
+
+            <img src="{{ image[0] }}" alt="{{ sponsor.crb_sponsors_name }}" />
+          </a>
+        </div>
+
+      {% endfor %}
+      </div>
+
+    {% endif %}
+
+  </div>
+
+{% endblock %}

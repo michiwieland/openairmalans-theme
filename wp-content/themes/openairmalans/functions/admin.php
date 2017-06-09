@@ -133,6 +133,7 @@ class Admin {
             'template-news.php'  => 'Neuigkeiten',
             'template-tickets.php'  => 'Tickets',
             'template-timetables.php'  => 'Zeitplan',
+            'template-sponsors.php'  => 'Sponsoren',
             'template-verein.php'  => 'Verein'
         );
 
