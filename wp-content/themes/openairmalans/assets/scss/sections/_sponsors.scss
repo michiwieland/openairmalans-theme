@@ -2,6 +2,7 @@
 .sponsors {
   text-align: left;
   width: 100%;
+  padding: 1rem;
 
   h2 {
     margin: 2rem 0 1rem 0;
@@ -14,6 +15,7 @@
   }
 
   .sponsor {
+    flex: 0 1 20rem;
     width: 20rem;
     height: 10rem;
     overflow: hidden;
@@ -21,7 +23,6 @@
     margin: 0 1rem 1rem 0;
 
     @media #{$small} {
-      width: 100%;
       margin: 0 0 1rem 0;
     }
 

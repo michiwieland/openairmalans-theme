@@ -28,7 +28,7 @@
   margin: 0 auto;
   overflow: auto;
 
-  @media #{$small} {
+  @media #{$small, $medium} {
     padding: 1em;
   }
 
