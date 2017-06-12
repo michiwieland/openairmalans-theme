@@ -20,11 +20,12 @@
       {% for mainSponsor in mainSponsors %}
 
         <div class="sponsor">
-          <a href="{{ mainSponsor.crb_main_sponsors_url }}" target="_blank" >
 
-            {% set image = function( 'wp_get_attachment_image_src', mainSponsor.crb_main_sponsors_logo, 'full' ) %}
+          {% set image = function( 'wp_get_attachment_image_src', mainSponsor.crb_main_sponsors_logo, 'full' ) %}
+          <img src="{{ image[0] }}" alt="{{ mainSponsor.crb_main_sponsors_name }}" />
 
-            <img src="{{ image[0] }}" alt="{{ mainSponsor.crb_main_sponsors_name }}" />
+          <a href="{{ mainSponsor.crb_main_sponsors_url }}" class="overlay" target="_blank" >
+            <p>{{mainSponsor.crb_main_sponsors_name}}</p>
           </a>
         </div>
 
@@ -42,11 +43,11 @@
       {% for presenter in presenters %}
 
         <div class="sponsor">
-          <a href="{{ presenter.crb_presenter_url }}" target="_blank" >
+          {% set image = function( 'wp_get_attachment_image_src', presenter.crb_presenter_logo, 'full' ) %}
+          <img src="{{ image[0] }}" alt="{{ presenter.crb_presenter_name }}" />
 
-            {% set image = function( 'wp_get_attachment_image_src', presenter.crb_presenter_logo, 'full') %}
-
-            <img src="{{ image[0] }}" alt="{{ presenter.crb_presenter_name }}" />
+          <a href="{{ presenter.crb_presenter_url }}" class="overlay" target="_blank" >
+            <p>{{presenter.crb_presenter_name}}</p>
           </a>
         </div>
 
@@ -64,11 +65,11 @@
       {% for sponsor in sponsors %}
 
         <div class="sponsor">
-          <a href="{{ sponsor.crb_sponsors_url }}" target="_blank" >
+          {% set image = function( 'wp_get_attachment_image_src', sponsor.crb_sponsors_logo, 'full' ) %}
+          <img src="{{ image[0] }}" alt="{{ sponsor.crb_sponsors_name }}" />
 
-            {% set image = function( 'wp_get_attachment_image_src', sponsor.crb_sponsors_logo, 'full' ) %}
-
-            <img src="{{ image[0] }}" alt="{{ sponsor.crb_sponsors_name }}" />
+          <a href="{{ sponsor.crb_sponsors_url }}" class="overlay" target="_blank" >
+            <p>{{sponsor.crb_sponsors_name}}</p>
           </a>
         </div>
 
