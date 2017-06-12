@@ -9,6 +9,9 @@ class Setup {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'neocode_enqueue_assets' ) );
 
+		add_action('admin_head', array( $this, 'check_post_type_and_remove_media_buttons' ) );
+
+
 		add_filter('upload_mimes', array( $this, 'mime_types') );
 
 		add_filter( 'xmlrpc_methods', array( $this, 'disable_xmlrpc' ) );
@@ -138,12 +141,12 @@ class Setup {
 	}
 
 
-	/**
-     * Remove pages from admin menu;
-     * http://codex.wordpress.org/Function_Reference/remove_menu_page
-     */
+	/*
+   * Remove pages from admin menu;
+   * http://codex.wordpress.org/Function_Reference/remove_menu_page
+   */
 
-    function remove_menus() {
+  function remove_menus() {
 
 		remove_menu_page( 'edit.php' ); // Posts
 
@@ -160,5 +163,18 @@ class Setup {
         }
 
     }
+
+		/*
+	   * Removes Media Button for specific post types
+	   */
+		function check_post_type_and_remove_media_buttons() {
+			global $current_screen;
+			// use 'post', 'page' or 'custom-post-type-name'
+			if( 'page' == $current_screen->post_type ||
+					'news' == $current_screen->post_type ||
+				 	'infos' == $current_screen->post_type) {
+				remove_action('media_buttons', 'media_buttons');
+			}
+		}
 
 }
