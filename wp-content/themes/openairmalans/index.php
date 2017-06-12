@@ -41,7 +41,7 @@ $infos_args = array(
 $news_args = array(
 	'post_type' => 'news',
 	'posts_per_page' => 3,
-	'order' => 'ASC',
+	'order' => 'DESC',
 	'orderby' => 'date',
 );
 
