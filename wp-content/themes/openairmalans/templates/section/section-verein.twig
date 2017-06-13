@@ -8,7 +8,21 @@
 {% endblock %}
 
 {% block content %}
-  <div class="column-2 contact">
+  <div class="column-2 verein">
     <p>{{post.content}}</p>
+  </div>
+{% endblock %}
+
+{% block appendix %}
+  <div class="contact">
+    <a href="mailto:{{ function( 'carbon_get_post_meta', post.ID, 'contact' ) }}">
+      <i class="fa fa-envelope-o" aria-hidden="true"></i><span>Kontakt Allgemein</span>
+    </a>
+    <a href="mailto:{{ function( 'carbon_get_post_meta', post.ID, 'contact_band' ) }}">
+      <i class="fa fa-music" aria-hidden="true"></i><span>Bandanfragen</span>
+    </a>
+    <a href="mailto:{{ function( 'carbon_get_post_meta', post.ID, 'contact_volunteers' ) }}">
+      <i class="fa fa-users" aria-hidden="true"></i><span>Kontakt Helfer</span>
+    </a>
   </div>
 {% endblock %}

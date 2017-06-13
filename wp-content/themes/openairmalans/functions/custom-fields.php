@@ -16,6 +16,7 @@ class CustomFields {
 		include_once( THEME_DIR . '/includes/artist-fields.php' );
 		include_once( THEME_DIR . '/includes/timetable-fields.php' );
 		include_once( THEME_DIR . '/includes/sponsor-fields.php' );
+		include_once( THEME_DIR . '/includes/verein-fields.php' );
 		include_once( THEME_DIR . '/includes/ticket-fields.php' );
 	}
 
