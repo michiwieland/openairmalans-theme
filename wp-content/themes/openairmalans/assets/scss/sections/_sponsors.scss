@@ -16,7 +16,7 @@
   }
 
   .sponsor {
-    flex: 0 1 20rem;
+    flex: 0 1 30%;
     width: 20rem;
     height: 10rem;
     overflow: hidden;
@@ -28,7 +28,12 @@
     align-items: center;
     justify-content: center;
 
+    @media #{$medium} {
+      flex: 0 1 45%;
+    }
+
     @media #{$small} {
+      flex: 0 1 100%;
       margin: 0 0 1rem 0;
     }
 
