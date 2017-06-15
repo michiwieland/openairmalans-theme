@@ -1,1 +1,19 @@
-{{ post.title }}
+{% extends "section.twig" %}
+
+{% block content %}
+
+  {% if posts %}
+
+    {% for post in impressions %}
+
+      {% include 'partials/archive-news.twig' %}
+
+    {% endfor %}
+
+  {% else %}
+
+    <p>{{ __( 'Zurzeit sind keine Impressionen verfügbar', 'neocode' ) }}</p>
+
+  {% endif %}
+
+{% endblock %}

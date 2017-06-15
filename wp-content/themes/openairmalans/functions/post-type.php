@@ -45,7 +45,6 @@ class CPT {
             'has_archive'         => true,
             'exclude_from_search' => false,
             'publicly_queryable'  => true,
-            'rewrite'             => true,
             'rewrite'             => array('slug'=>'news','with_front'=>true),
             'capability_type'     => 'post',
         );
@@ -145,7 +144,7 @@ class CPT {
         );
         $args = array(
             'labels'              => $labels,
-            'supports'            => array( 'title', 'editor'),
+            'supports'            => array( 'title', 'thumbnail'),
             'hierarchical'        => true,
             'public'              => true,
             'show_ui'             => true,
@@ -158,8 +157,7 @@ class CPT {
             'has_archive'         => true,
             'exclude_from_search' => false,
             'publicly_queryable'  => true,
-            'rewrite'             => false,
-            //'rewrite'             => array('slug'=>'angebot','with_front'=>true),
+            'rewrite'             => array('slug'=>'impressionen','with_front'=>true),
             'capability_type'     => 'page',
         );
         register_post_type( 'impressions', $args );
