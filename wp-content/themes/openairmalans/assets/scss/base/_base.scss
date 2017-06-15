@@ -54,16 +54,6 @@ section {
       }
     }
 
-    article {
-      border: 0.2rem solid $pink;
-      outline: 0.2rem solid $yellow;
-
-       > header {
-         color: $pink;
-         background: $yellow;
-       }
-    }
-
     .button {
       background-color: $yellow;
       color: $pink;
@@ -78,20 +68,17 @@ section {
 }
 
 article {
-  border: 0.2rem solid $yellow;
-  outline: 0.2rem solid $pink;
   margin: 2rem 1rem 1rem 1rem;
   text-align: left;
 
   > header {
-    background: $pink;
     font-size: 1.2rem;
     text-align: center;
     padding: 1rem;
   }
 
   > .content {
-    padding: 1rem 0.5rem 0.5rem;
+    padding: 0.5rem;
   }
 }
 

@@ -5,6 +5,10 @@
     flex: 0 1 100%;
   }
 
+  > header > a {
+    color: $yellow;
+  }
+
   .post-thumbnail {
     max-height: 12.5rem;
     overflow: hidden;
@@ -19,5 +23,15 @@
         min-width: 100%;
       }
     }
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .read-more {
+    margin-top: 0.5rem;
+    display: block;
+    color: $yellow;
   }
 }

@@ -1,6 +1,16 @@
 /* TIMETABLE */
 .timetable {
   flex: 1 1 40%;
+  border: 0.2rem solid $pink;
+  outline: 0.2rem solid $yellow;
+
+  > header {
+     background: $yellow;
+
+     > h2 {
+       color: $pink;
+     }
+  }
 
   @media #{$medium} {
     flex: 1 1 100%;
