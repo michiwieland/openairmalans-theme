@@ -1,27 +1,5 @@
-<article class="single-news" id="post-{{ post.id }}">
+{% extends "blueprint-single.twig" %}
 
-
-  <!-- Meta Information -->
-  <header>
-    <a href="{{ post.link }}">
-      <h2>{{ post.title }}</h2>
-    </a>
-  </header>
-
-  {% if post.thumbnail %}
-
-    <!-- Post Thumbnail -->
-    <div class="post-thumbnail">
-      <a href="{{ post.link }}">
-        <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(1000, 600, 'center') }}" alt="{{ post.title }}">
-      </a>
-    </div>
-
-  {% endif %}
-
-  <!-- Post content -->
-  <div class="content">
-    {{ post.content }}
-  </div>
-
-</article>
+{% block wrapper_in %}
+  <a href="{{ post.link }}" class="single-news" id="post-{{ post.id }}">
+{% endblock %}

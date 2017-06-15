@@ -1,0 +1,27 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<section>
+
+		<div class="inner">
+
+			{% if posts %}
+
+				{% for post in posts %}
+
+					{% include 'partials/single-news.twig' %}
+
+				{% endfor %}
+
+			{% else %}
+
+		    	<p>{{ __( 'Zurzeit sind keine Neuigkeiten verfügbar', 'neocode' ) }}</p>
+
+		  	{% endif %}
+
+		</div>
+
+	</section>
+
+{% endblock %}

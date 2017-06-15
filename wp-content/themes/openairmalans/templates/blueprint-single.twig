@@ -1,0 +1,47 @@
+{# Post Wrapper in #}
+{% block wrapper_in %}
+
+  <article class="single-news">
+
+{% endblock %}
+
+  {# Post title #}
+  {% block post_title %}
+
+    <!-- Meta Information -->
+    <header>
+      <h2>{{ post.title }}</h2>
+    </header>
+
+  {% endblock %}
+
+  {% if post.thumbnail %}
+
+    {# Post thumbnail #}
+    {% block post_thumbnail %}
+
+      <!-- Post Thumbnail -->
+      <div class="post-thumbnail">
+        <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(1000, 600, 'center') }}" alt="{{ post.title }}">
+      </div>
+
+    {% endblock %}
+
+  {% endif %}
+
+{# Post content #}
+{% block post_content %}
+
+  <!-- Post content -->
+  <div class="content">
+    {{ post.content }}
+  </div>
+
+{% endblock %}
+
+{# Post Wrapper out #}
+{% block wrapper_out %}
+
+  </article>
+
+{% endblock %}
