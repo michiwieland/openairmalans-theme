@@ -4,6 +4,7 @@
   width: 100%;
   padding: 1rem;
 
+
   h2 {
     margin: 2rem 0 1rem 0;
   }
@@ -15,33 +16,50 @@
   }
 
   .sponsor {
-    flex: 0 1 20rem;
+    flex: 0 1 30%;
     width: 20rem;
     height: 10rem;
     overflow: hidden;
+    position: relative;
     background: $white;
     margin: 0 1rem 1rem 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media #{$medium} {
+      flex: 0 1 45%;
+    }
 
     @media #{$small} {
+      flex: 0 1 100%;
       margin: 0 0 1rem 0;
     }
 
-    > a {
-      padding: 1rem;
-      width: 100%;
+    > .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      > img {
-        transition: all .3s ease;
-      }
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: $yellow;
 
       &:hover {
-        > img {
-          transform:scale(1.05);
-        }
+        opacity: 1;
+      }
+
+      > p {
+        color: $pink;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
       }
     }
   }
