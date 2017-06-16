@@ -1,5 +1,13 @@
 {% extends "blueprint-single.twig" %}
 
 {% block post_content %}
-  <p>Content</p>
+
+	{% set impressions = function( 'carbon_get_post_meta', post.ID, 'crb_image', 'complex' ) %}
+
+	{% for impressions in impressions %}
+
+        <img src="{{ impressions.image }}">
+
+	{% endfor %}
+
 {% endblock %}

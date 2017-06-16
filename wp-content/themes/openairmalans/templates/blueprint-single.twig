@@ -10,13 +10,6 @@
     {# Post thumbnail #}
     {% block post_thumbnail %}
 
-      <!-- Post Thumbnail -->
-      <div class="post-thumbnail">
-        <a href="{{ post.link }}">
-          <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(1000, 600, 'center') }}" alt="{{ post.title }}">
-        </a>
-      </div>
-
     {% endblock %}
 
   {% endif %}
