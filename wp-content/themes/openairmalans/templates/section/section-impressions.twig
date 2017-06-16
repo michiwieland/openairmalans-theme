@@ -8,16 +8,11 @@
 
       <article class="impression" id="post-{{ post.id }}">
 
-        <header>
-          <h2>{{ post.title }}</h2>
-        </header>
+        <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(350, 350, 'center') }}" alt="{{ post.title }}">
 
-        <!-- Post Thumbnail -->
-        <div class="post-thumbnail">
-          <a href="{{ post.link }}">
-            <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(350, 350, 'center') }}" alt="{{ post.title }}">
-          </a>
-        </div>
+				<a href="{{ post.link }}" class="permanent-overlay">
+          <h2>{{post.title}}</h2>
+			  </a>
 
       </article>
 
