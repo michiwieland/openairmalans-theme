@@ -6,19 +6,23 @@
 
 		<div class="inner">
 
-			{% if posts %}
+			<div class="row-layout">
 
-				{% for post in posts %}
+				{% if posts %}
 
-					{% include 'partials/single-news.twig' %}
+					{% for post in posts %}
 
-				{% endfor %}
+						{% include 'partials/single-news.twig' %}
 
-			{% else %}
+					{% endfor %}
 
-		    	<p>{{ __( 'Zurzeit sind keine Neuigkeiten verfügbar', 'neocode' ) }}</p>
+				{% else %}
 
-		  	{% endif %}
+			    	<p>{{ __( 'Zurzeit sind keine Neuigkeiten verfügbar', 'neocode' ) }}</p>
+
+			  {% endif %}
+
+			</div>
 
 		</div>
 
