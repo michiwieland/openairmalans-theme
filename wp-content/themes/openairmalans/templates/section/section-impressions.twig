@@ -8,12 +8,14 @@
 
       <article class="impression" id="post-{{ post.id }}">
 
-        <h2>{{ post.title }}</h2>
+        <header>
+          <h2>{{ post.title }}</h2>
+        </header>
 
         <!-- Post Thumbnail -->
         <div class="post-thumbnail">
           <a href="{{ post.link }}">
-            <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(1000, 600, 'center') }}" alt="{{ post.title }}">
+            <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(350, 350, 'center') }}" alt="{{ post.title }}">
           </a>
         </div>
 
