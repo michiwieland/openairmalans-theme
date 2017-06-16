@@ -25,7 +25,7 @@ $artists_args = array(
 $impressions_args = array(
 	'post_type' => 'impressions',
 	'posts_per_page' => -1,
-	'order' => 'ASC',
+	'order' => 'DESC',
 	'orderby' => 'title'
 );
 
