@@ -6,7 +6,15 @@
 
     {% for post in impressions %}
 
-      {% include 'partials/archive-news.twig' %}
+      <article class="impression" id="post-{{ post.id }}">
+
+        <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(350, 350, 'center') }}" alt="{{ post.title }}">
+
+				<a href="{{ post.link }}" class="permanent-overlay">
+          <h2>{{post.title}}</h2>
+			  </a>
+
+      </article>
 
     {% endfor %}
 

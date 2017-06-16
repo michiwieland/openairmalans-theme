@@ -1,6 +1,4 @@
-{% extends "blueprint-single.twig" %}
-
-{% block post_content %}
+<article class="single-impression">
 
 	{% set impressions = function( 'carbon_get_post_meta', post.ID, 'impression') %}
 	{% set impressions = function( 'explode', ',', impressions) %}
@@ -12,4 +10,4 @@
 
 	{% endfor %}
 
-{% endblock %}
+</article>

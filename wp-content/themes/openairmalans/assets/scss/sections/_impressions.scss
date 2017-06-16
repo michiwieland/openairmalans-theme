@@ -1,0 +1,32 @@
+.impression {
+  flex: 0 1 28%;
+  overflow: hidden;
+  position: relative;
+
+
+  @media #{$small} {
+    flex: 0 1 100%;
+  }
+
+  .permanent-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(230,42,120,0.7);
+
+    > h2 {
+      font-size: 4rem;
+      color: $yellow;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

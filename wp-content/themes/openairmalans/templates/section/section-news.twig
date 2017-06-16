@@ -6,7 +6,28 @@
 
     {% for post in news %}
 
-      {% include 'partials/archive-news.twig' %}
+      <article class="news" id="post-{{ post.id }}">
+
+        <!-- Post Thumbnail -->
+        <div class="post-thumbnail">
+          <a href="{{ post.link }}">
+            <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(1000, 600, 'center') }}" alt="{{ post.title }}">
+          </a>
+        </div>
+
+        <header>
+            <a href="{{ post.link }}">
+              <small class="meta">{{ post.post_date|date("d. M Y") }}</small>
+              <h2>{{ post.title }}</h2>
+            </a>
+        </header>
+
+        <!-- Post content -->
+        <div class="content">
+          	{{ post.get_preview(15) }}
+      	</div>
+
+      </article>
 
     {% endfor %}
 

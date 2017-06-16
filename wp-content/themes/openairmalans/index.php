@@ -26,7 +26,7 @@ $impressions_args = array(
 	'post_type' => 'impressions',
 	'posts_per_page' => -1,
 	'order' => 'ASC',
-	'orderby' => 'menu_order'
+	'orderby' => 'title'
 );
 
 // Grab infos

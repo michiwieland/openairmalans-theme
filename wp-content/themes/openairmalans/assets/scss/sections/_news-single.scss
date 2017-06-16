@@ -14,12 +14,13 @@
     max-width: 100%;
   }
 
-  > header > a {
-    color: $yellow-light;
+  > header > h2 {
+    font-size: 2.5rem;
   }
 
   .post-thumbnail {
     max-height: 37rem;
+    margin-bottom: 1rem;
 
     > a {
       display: block;
@@ -31,5 +32,9 @@
         min-width: 100%;
       }
     }
+  }
+
+  .content {
+    margin-bottom: 1rem;
   }
 }
