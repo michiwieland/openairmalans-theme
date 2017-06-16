@@ -2,7 +2,7 @@
 .front {
   background: $yellow;
   color: $pink;
-  height: 100vh;
+  height: calc(100vh - #{$nav_height});
 
   .inner {
     display: flex;

@@ -6,7 +6,8 @@
 	{% for impression in impressions %}
 
 		{% set image = function( 'wp_get_attachment_image', impression, 'large') %}
-		{{ image }}
+		{% set image_link = function( 'wp_get_attachment_image_src', impression, 'neocode-featured-image' ) %}
+		<a data-lity href="{{ image_link['0'] }}">{{ image }}</a>
 
 	{% endfor %}
 
