@@ -10,7 +10,7 @@
 
 				{% for post in posts %}
 
-					{% include 'partials/single-news.twig' %}
+					{% include ['partials/single-'~post.post_type~'.twig'] %}
 
 				{% endfor %}
 
