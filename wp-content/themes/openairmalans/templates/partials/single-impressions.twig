@@ -2,11 +2,13 @@
 
 {% block post_content %}
 
-	{% set impressions = function( 'carbon_get_post_meta', post.ID, 'crb_image', 'complex' ) %}
+	{% set impressions = function( 'carbon_get_post_meta', post.ID, 'impression') %}
+	{% set impressions = function( 'explode', ',', impressions) %}
 
-	{% for impressions in impressions %}
+	{% for impression in impressions %}
 
-        <img src="{{ impressions.image }}">
+		{% set image = function( 'wp_get_attachment_image', impression, 'large') %}
+		{{ image }}
 
 	{% endfor %}
 

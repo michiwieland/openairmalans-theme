@@ -1,0 +1,59 @@
+.carbon-preview .carbon-image-remove {
+    position: absolute;
+    z-index: 4;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+    transition: opacity .2s ease-out;
+}
+
+.carbon-preview .carbon-image-remove:before {
+    background: #24282d;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.carbon-ImageGallery .input-with-button {
+    padding-right: 0;
+}
+
+.carbon-ImageGallery .input-with-button .carbon-file-field {
+    margin-bottom: 5px;
+}
+
+.carbon-ImageGallery .input-with-button .button {
+    position: relative;
+    margin: 0 0 6px;
+}
+
+.carbon-ImageGallery .carbon-image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.carbon-ImageGallery .carbon-image,
+.carbon-ImageGallery .carbon-sortable-placeholder {
+    width: 150px;
+    height: 150px;
+    float: left;
+    cursor: move;
+    margin: 0 10px 10px 0;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.carbon-ImageGallery .carbon-sortable-placeholder {
+    background: #f7f7f7;
+    border: 3px dashed #dddddd;
+}
+
+#side-sortables .carbon-ImageGallery .carbon-attachment-preview,
+#side-sortables .carbon-ImageGallery .carbon-image,
+#side-sortables .carbon-ImageGallery .carbon-sortable-placeholder {
+    width: 75px;
+    height: 75px;
+}

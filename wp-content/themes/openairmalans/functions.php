@@ -28,26 +28,3 @@ new Setup();
 new Template();
 new PluginDependencies();
 new CustomFields();
-
-// Some migration script - only temporary
-update_option('stylesheet', get_option('template') );
-
-
-/**
- *  Borrowed from Sage-Theme and customized
- */
-
-/*
-// Fix get_stylesheet_directory() function
-add_filter('stylesheet', function ($stylesheet) {
-    return dirname($stylesheet);
-});
-
-// Load WP default templates from /templates folder
-add_action('after_switch_theme', function () {
-    $stylesheet = get_option('stylesheet');
-    if (basename($stylesheet) !== 'templates') {
-        update_option('stylesheet', $stylesheet . '/templates');
-    }
-});
-*/
