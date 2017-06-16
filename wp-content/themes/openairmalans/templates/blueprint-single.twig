@@ -5,6 +5,22 @@
 
 {% endblock %}
 
+  {% if post.thumbnail %}
+
+    {# Post thumbnail #}
+    {% block post_thumbnail %}
+
+      <!-- Post Thumbnail -->
+      <div class="post-thumbnail">
+        <a href="{{ post.link }}">
+          <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(1000, 600, 'center') }}" alt="{{ post.title }}">
+        </a>
+      </div>
+
+    {% endblock %}
+
+  {% endif %}
+
   {# Post title #}
   {% block post_title %}
 
@@ -14,20 +30,6 @@
     </header>
 
   {% endblock %}
-
-  {% if post.thumbnail %}
-
-    {# Post thumbnail #}
-    {% block post_thumbnail %}
-
-      <!-- Post Thumbnail -->
-      <div class="post-thumbnail">
-        <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(1000, 600, 'center') }}" alt="{{ post.title }}">
-      </div>
-
-    {% endblock %}
-
-  {% endif %}
 
 {# Post content #}
 {% block post_content %}

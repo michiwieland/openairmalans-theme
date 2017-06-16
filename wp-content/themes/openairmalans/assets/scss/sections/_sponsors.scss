@@ -47,14 +47,14 @@
       width: 100%;
       opacity: 0;
       transition: .5s ease;
-      background-color: $yellow;
+      background-color: $pink;
 
       &:hover {
         opacity: 1;
       }
 
       > p {
-        color: $pink;
+        color: $yellow;
         position: absolute;
         top: 50%;
         left: 50%;

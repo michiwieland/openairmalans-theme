@@ -9,8 +9,11 @@
 {% block post_title %}
 
 	<header>
-    	<a href="{{ post.link }}"><h2>{{ post.title }}</h2></a>
-    </header>
+    	<a href="{{ post.link }}">
+				<small class="meta">{{ post.post_date|date("d. M Y") }}</small>
+				<h2>{{ post.title }}</h2>
+			</a>
+  </header>
 
 {% endblock %}
 
@@ -18,7 +21,7 @@
 
 	<!-- Post content -->
 	<div class="content">
-    	{{ post.get_preview(20) }}
+    	{{ post.get_preview(15) }}
 	</div>
 
 {% endblock %}

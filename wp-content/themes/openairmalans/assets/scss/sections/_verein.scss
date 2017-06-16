@@ -1,7 +1,7 @@
 /* VEREIN */
 .verein {
   padding: 1rem;
-  color: $pink;
+  color: $yellow-light;
 }
 
 .contact {
@@ -10,6 +10,7 @@
   justify-content: center;
   > a {
     margin: 1rem 2rem;
+    color: $yellow;
 
     > i {
       margin-right: 1rem;

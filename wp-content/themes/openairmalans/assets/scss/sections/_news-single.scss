@@ -1,6 +1,18 @@
 .single-news {
   flex: 1 1 100%;
   color: $pink;
+  max-width: 70%;
+  margin: 2rem auto;
+  padding-bottom: 2rem;
+  border-bottom: 0.2rem solid $pink;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  @media #{$small, $medium} {
+    max-width: 100%;
+  }
 
   > header > a {
     color: $yellow-light;
