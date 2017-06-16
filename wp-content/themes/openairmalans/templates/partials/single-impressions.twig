@@ -1,14 +1,12 @@
-<article class="single-impression">
+<div class="impressions">
 
 	{% set impressions = function( 'carbon_get_post_meta', post.ID, 'impression') %}
 	{% set impressions = function( 'explode', ',', impressions) %}
 
 	{% for impression in impressions %}
-
 		{% set image = function( 'wp_get_attachment_image', impression, 'large') %}
 		{% set image_link = function( 'wp_get_attachment_image_src', impression, 'neocode-featured-image' ) %}
-		<a data-lity href="{{ image_link['0'] }}">{{ image }}</a>
-
+		<a data-lity href="{{ image_link['0'] }}" class="single-impression">{{ image }}</a>
 	{% endfor %}
 
-</article>
+</div>

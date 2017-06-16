@@ -1,0 +1,25 @@
+.impressions {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  > .single-impression {
+    flex: 0 1 28%;
+
+    @media #{$small, $medium} {
+      flex: 0 1 100%;
+    }
+
+    position: relative;
+    margin: 1rem;
+    overflow: hidden;
+    max-width: 22rem;
+    max-height: 15rem;
+
+    > img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
