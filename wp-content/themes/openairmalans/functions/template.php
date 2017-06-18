@@ -16,18 +16,20 @@ class Template {
 		\Timber::$dirname = 'templates';
 
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
-    add_filter( 'timber_context', array( $this, 'add_to_context') );
+    	add_filter( 'timber_context', array( $this, 'add_to_context') );
+
 	}
 
-  function add_to_context($data) {
-    $data['menu'] = new \TimberMenu();
-    return $data;
-  }
+	function add_to_context($data) {
+		$data['menu'] = new \TimberMenu();
+		return $data;
+	}
 
 	// Twig Error Message
     function twig_message() {
 
     	echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php') ) . '</a></p></div>';
+
 
     }
 
@@ -38,13 +40,9 @@ class Template {
 
 	}
 
-
 	function twg_get_template_name() {
-
 	    # edit this according to the implementation of your class:
 	    return Helpers::get_template_name();
-	    //return get_the_ID();
-	    //return 'sdfgs';
 	}
 
 	function add_to_twig($twig) {

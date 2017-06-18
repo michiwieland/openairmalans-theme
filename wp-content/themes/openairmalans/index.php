@@ -52,15 +52,12 @@ $news_args = array(
 	'orderby' => 'date',
 );
 
+
 // Grab impressum
+$impressum_object = get_page_by_title( 'Impressum' );
 $impressum_args = array(
     'post_type'  => 'page',
-    'meta_query' => array(
-        array(
-            'key'   => '_wp_page_template',
-            'value' => 'template-impressum.php'
-        )
-    )
+    'p' => $impressum_object->id
 );
 
 $context = Timber::get_context();
