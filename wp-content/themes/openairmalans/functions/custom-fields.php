@@ -6,7 +6,6 @@ class CustomFields {
 	function __construct() {
 		add_action('carbon_register_fields', array( $this, 'crb_register_custom_fields' ) );
 		$this->verify_custom_fields();
-		add_action( 'after_setup_theme', array( $this, 'crb_init_carbon_field_ImageGallery' ), 15 );
 	}
 
 	/**
@@ -19,7 +18,6 @@ class CustomFields {
 		include_once( THEME_DIR . '/includes/sponsor-fields.php' );
 		include_once( THEME_DIR . '/includes/verein-fields.php' );
 		include_once( THEME_DIR . '/includes/ticket-fields.php' );
-		include_once( THEME_DIR . '/includes/impression-fields.php' );
 	}
 
 	/**
@@ -62,17 +60,6 @@ class CustomFields {
 		    function carbon_get_comment_meta( $id, $name, $type = null ) {
 		        return false;
 		    }
-		}
-	}
-
-
-	/**
-	 * 	Add custom gallery field
-	 */
-
-	function crb_init_carbon_field_ImageGallery() {
-		if ( class_exists( 'Carbon_Fields\\Field\\Field' ) ) {
-			include_once THEME_LIB_DIR . 'ImageGallery_Field.php';
 		}
 	}
 

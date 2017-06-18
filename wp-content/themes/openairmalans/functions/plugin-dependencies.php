@@ -38,6 +38,13 @@ class PluginDependencies {
   			'required'  => true
   		),
 
+			// responsive lightbox
+			array(
+  			'name'      => 'Photoswipe Masonry Gallery',
+  			'slug'      => 'photoswipe-masonry',
+  			'required'  => true
+  		),
+
   		// Resize huge image uploads down to a size that is more reasonable
   		array(
   			'name'      => 'Imsanity',
