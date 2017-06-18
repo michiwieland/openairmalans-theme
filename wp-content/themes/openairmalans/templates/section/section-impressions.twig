@@ -2,16 +2,17 @@
 
 {% block content %}
 
-  {% if posts %}
+  {% if impressions %}
 
-    {% for post in impressions %}
 
-      <article class="impression" id="post-{{ post.id }}">
+    {% for impression in impressions %}
 
-        <img src="{{ post.thumbnail.src('neocode-featured-image')|resize(350, 350, 'center') }}" alt="{{ post.title }}">
+      <article class="impression" id="post-{{ impression.id }}">
 
-				<a href="{{ post.link }}" class="permanent-overlay">
-          <h2>{{post.title}}</h2>
+        <img src="{{ impression.thumbnail.src('neocode-featured-image')|resize(350, 350, 'center') }}" alt="{{ impression.title }}">
+
+				<a href="{{ impression.link }}" class="permanent-overlay">
+          <h2>{{impression.title}}</h2>
 			  </a>
 
       </article>
@@ -24,4 +25,8 @@
 
   {% endif %}
 
+{% endblock %}
+
+{% block appendix %}
+  <a class="button" href="{{ function( 'get_post_type_archive_link', 'impressions' ) }}">{{ __( 'Vergangene Jahre', 'neocode' ) }}</a>
 {% endblock %}

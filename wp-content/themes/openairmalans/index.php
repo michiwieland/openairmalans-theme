@@ -24,7 +24,7 @@ $artists_args = array(
 // Grab impressions
 $impressions_args = array(
 	'post_type' => 'impressions',
-	'posts_per_page' => -1,
+	'posts_per_page' => 3,
 	'order' => 'DESC',
 	'orderby' => 'title'
 );

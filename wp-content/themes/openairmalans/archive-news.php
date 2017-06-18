@@ -5,7 +5,6 @@ if (!isset($paged) || !$paged){
     $paged = 1;
 }
 */
-$context = Timber::get_context();
 /*
 $args = array(
     'post_type' => 'news',
@@ -19,6 +18,7 @@ $args = array(
 // make sure you've got query_posts in your .php file
 */
 
+$context = Timber::get_context();
 $context['posts'] = Timber::get_posts();
 $context['pagination'] = Timber::get_pagination();
 
