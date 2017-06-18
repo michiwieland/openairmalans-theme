@@ -26,6 +26,7 @@
           <ul>
             {% for entry in day.crb_timetable_entries %}
               <li>
+                <span>{{entry.timetable_entry_where}}</span>
                 <span>{{entry.timetable_entry_from}} - {{entry.timetable_entry_to}}</span>
                 <span>{{entry.timetable_entry_act}}</span>
               </li>
@@ -37,6 +38,11 @@
       </article>
 
 		{% endfor %}
+
+    <ul class="timetable-key">
+      <li>H = Hauptbühne</li>
+      <li>N = Nebenbühne</li>
+    </ul>
 
 	{% else %}
 

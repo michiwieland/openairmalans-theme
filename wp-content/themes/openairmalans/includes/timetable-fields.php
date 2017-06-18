@@ -11,6 +11,11 @@ Container::make('post_meta', 'Timetable')
           Field::make('complex', 'crb_timetable_entries')
             ->set_layout('tabbed-vertical')
             ->add_fields(array(
+              Field::make( "select", "timetable_entry_where", "Wo" )
+              ->add_options( array(
+                  'H' => 'Hauptbühne',
+                  'N' => 'Nebenbühne'
+              )),
               Field::make('text', 'timetable_entry_from', "Von")->set_required(true),
               Field::make('text', 'timetable_entry_to', "Bis")->set_required(true),
               Field::make('text', 'timetable_entry_act', "Act")->set_required(true),

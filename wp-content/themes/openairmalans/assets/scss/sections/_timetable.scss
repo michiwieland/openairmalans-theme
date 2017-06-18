@@ -1,4 +1,14 @@
 /* TIMETABLE */
+.timetable-key {
+  color: $yellow;
+  margin-left: 0.5rem;
+
+  > li {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+}
+
 .timetable {
   flex: 1 1 40%;
   border: 0.2rem solid $pink;
@@ -25,8 +35,8 @@
       color: $pink;
     }
 
-    > span:first-child {
-      margin-right: 1rem;
+    > span:nth-child(-n+3) {
+      margin-right: 0.5rem;
     }
   }
 }
