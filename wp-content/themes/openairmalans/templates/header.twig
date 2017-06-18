@@ -56,6 +56,12 @@
                   <i class="fa fa-facebook-square" aria-hidden="true"></i>
                 </a>
               </li>
+            {% elseif 'youtube' in item.get_link %}
+              <li class="nav-main-item social-icon {{item.classes | join(' ')}}">
+                <a class="social-icon" href="{{item.get_link}}" target="_blank">
+                  <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                </a>
+              </li>
             {% else %}
               <li class="nav-main-item {{item.classes | join(' ')}}">
                 <a class="nav-main-link" href="{{item.get_link}}">
