@@ -1,0 +1,14 @@
+section.page {
+  text-align: left;
+  padding: 2rem 0;
+  margin: 0 auto;
+  max-width: 70%;
+
+  @media #{$small, $medium} {
+    max-width: 100%;
+  }
+
+  > h1 {
+    text-align: left;
+  }
+}

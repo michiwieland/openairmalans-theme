@@ -2,17 +2,19 @@
 
 	{% for post in posts %}
 
-		<article>
 
-			<header>
-				<h2>{{ post.title }}</h2>
-			</header>
+		<div class="inner">
+			<section class="page">
 
-			<div class="content">
-				{{ post.get_content() }}
-			</div>
+				<h1>{{ post.title }}</h1>
 
-		</article>
+				<div class="content">
+					{{ post.get_content() }}
+				</div>
+
+			</section>
+
+		</div>
 
 	{% endfor %}
 
