@@ -134,7 +134,8 @@ class Admin {
             'template-tickets.php'  => 'Tickets',
             'template-timetables.php'  => 'Zeitplan',
             'template-sponsors.php'  => 'Sponsoren',
-            'template-verein.php'  => 'Verein'
+            'template-verein.php'  => 'Verein',
+            'template-impressum.php'  => 'Impressum'
         );
 
         return array_merge( $pages_templates, $templates );

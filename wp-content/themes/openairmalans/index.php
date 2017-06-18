@@ -10,7 +10,14 @@ $args = array(
 	'post_type' => 'page',
 	'posts_per_page' => -1,
 	'order' => 'ASC',
-	'orderby' => 'menu_order'
+	'orderby' => 'menu_order',
+	'meta_query' => array(
+        array(
+            'key' => '_wp_page_template',
+            'value' => 'template-impressum.php',
+            'compare' => '!='
+        )
+    )
 );
 
 // Grab artists
@@ -45,11 +52,23 @@ $news_args = array(
 	'orderby' => 'date',
 );
 
+// Grab impressum
+$impressum_args = array(
+    'post_type'  => 'page',
+    'meta_query' => array(
+        array(
+            'key'   => '_wp_page_template',
+            'value' => 'template-impressum.php'
+        )
+    )
+);
+
 $context = Timber::get_context();
 $context['posts'] = new Timber\PostQuery( $args, 'Neocode\Theme\OnepagePost' );
 $context['artists'] = Timber::get_posts( $artists_args );
 $context['infos'] = Timber::get_posts( $infos_args );
 $context['impressions'] = Timber::get_posts( $impressions_args );
 $context['news'] = Timber::get_posts( $news_args );
+$context['impressum'] = Timber::get_posts( $impressum_args );
 
 Timber::render('onepager.twig', $context);

@@ -6,7 +6,6 @@ $impressions_args = array(
 	'orderby' => 'title'
 );
 
-
 $context = Timber::get_context();
 $context['posts'] = Timber::get_posts($impressions_args);
 
