@@ -82,6 +82,13 @@ article {
   }
 }
 
+/* RESPONSIVE IFRAMES (VIDEO USAGE) */
+.content iframe {
+  width: 100%;
+  height: calc(100vw * (9/16));
+  max-height: calc( #{65rem / 100 * 70} * (9/16) );
+}
+
 /* TEXT / HEADINGS */
 h1, h2, nav {
   @include custom-font('Ranga', cursive);
