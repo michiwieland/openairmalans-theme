@@ -26,17 +26,30 @@
     flex: 1 1 100%;
   }
 
-  > ul > li {
-    padding: 1rem;
-    color: $yellow;
+  > ul {
+    display:table;
+    width: 100%;
 
-    &:nth-child(even) {
-      background: $yellow;
-      color: $pink;
-    }
+    > li {
+      color: $yellow;
+      display:table-row;
 
-    > span:nth-child(-n+3) {
-      margin-right: 0.5rem;
+      &:nth-child(even) {
+        background: $yellow;
+        color: $pink;
+      }
+
+      > span {
+        padding: 1rem 0.5rem;
+        display:table-cell;
+        text-align:left;
+        break-inside: avoid;
+
+        &:nth-child(2) {
+          width: 7.5rem;
+        }
+
+      }
     }
   }
 }
