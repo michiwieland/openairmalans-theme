@@ -3,4 +3,10 @@ section article.info {
   border: none;
   outline: none;
   margin: 0 0 2rem 0;
+
+  a {
+    margin: 0.5rem 0;
+    display: block;
+    color: $yellow;
+  }
 }

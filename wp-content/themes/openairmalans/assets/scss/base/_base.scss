@@ -14,7 +14,7 @@ body {
 }
 
 .row-layout {
-  align-items: stretch;
+  align-items: flex-start;
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
@@ -52,6 +52,10 @@ section {
       span::after {
         border-color: $yellow;
       }
+    }
+
+    a {
+      color: $yellow;
     }
 
     .button {
