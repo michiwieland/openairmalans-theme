@@ -57,6 +57,30 @@
 
     {% endif %}
 
+
+    {% set mediaPartners = function( 'carbon_get_post_meta', post.ID, 'crb_media_partner', 'complex' ) %}
+
+    {% if mediaPartners %}
+
+      <h2>Presenter</h2>
+      <div class="sponsor-section">
+      {% for mediaPartner in mediaPartners %}
+
+        <div class="sponsor">
+          {% set image = function( 'wp_get_attachment_image_src', mediaPartner.crb_media_partner_logo, 'full' ) %}
+          <img src="{{ image[0] }}" alt="{{ mediaPartner.crb_media_partner_name }}" />
+
+          <a href="{{ mediaPartner.crb_media_partner_url }}" class="overlay" target="_blank" >
+            <p>{{mediaPartner.crb_media_partner_name}}</p>
+          </a>
+        </div>
+
+      {% endfor %}
+      </div>
+
+    {% endif %}
+
+
     {% set sponsors = function( 'carbon_get_post_meta', post.ID, 'crb_sponsors', 'complex' ) %}
 
     {% if sponsors %}
