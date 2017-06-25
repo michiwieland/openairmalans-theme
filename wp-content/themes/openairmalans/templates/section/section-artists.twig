@@ -7,8 +7,7 @@
 		{% for post in artists %}
 
 			<div class="artist">
-
-				<img src="{{post.thumbnail.src}}" class="artist__image" alt="{{post.title}}">
+				<img src="{{post.thumbnail.src|resize(200, 200, 'center')}}" class="artist__image" alt="{{post.title}}">
 
 				<a href="{{ function( 'carbon_get_post_meta', post.ID, 'artist_url' ) }}"
 			     	class="overlay"
