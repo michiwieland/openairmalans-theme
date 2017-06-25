@@ -26,9 +26,9 @@
           <ul>
             {% for entry in day.crb_timetable_entries %}
               <li>
-                <span>{{entry.timetable_entry_where}}</span>
                 <span>{{entry.timetable_entry_from}} - {{entry.timetable_entry_to}}</span>
                 <span>{{entry.timetable_entry_act}}</span>
+                <span>{{entry.timetable_entry_where}}</span>
               </li>
             {% endfor %}
           </ul>
