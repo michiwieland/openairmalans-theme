@@ -28,6 +28,7 @@ body > header {
         opacity: 0.9;
         padding: 5.5rem 0 1rem 3rem;
         text-align: left;
+        line-height: 3rem;
       }
 
       > li {
@@ -37,6 +38,7 @@ body > header {
 
         @media screen and (max-width: $max-width) {
           margin: 0 .5rem;
+          font-size: 1.75rem;
         }
 
         a {

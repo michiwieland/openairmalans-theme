@@ -27,6 +27,12 @@
       justify-content: center;
       transform: rotate(15deg);
 
+      @media #{$small} {
+        width: 7rem;
+        height: 7rem;
+        font-size: 70%;
+      }
+
       > a {
         color: $yellow;
       }

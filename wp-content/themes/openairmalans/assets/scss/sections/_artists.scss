@@ -10,6 +10,8 @@
   }
 
   > .overlay {
+    @include custom-font('Ranga', cursive);
+    font-size: 1.5rem;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -17,12 +19,11 @@
     right: 0;
     height: 100%;
     width: 100%;
-    opacity: 0;
     transition: .5s ease;
-    background-color: $pink;
+    background-color: rgba(230,42,120,0.7);
 
     &:hover {
-      opacity: 1;
+      opacity: 0;
     }
 
     > p {

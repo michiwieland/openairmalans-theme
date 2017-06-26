@@ -21,6 +21,7 @@
   .post-thumbnail {
     max-height: 37rem;
     margin-bottom: 1rem;
+    overflow: hidden;
 
     > a {
       display: block;
