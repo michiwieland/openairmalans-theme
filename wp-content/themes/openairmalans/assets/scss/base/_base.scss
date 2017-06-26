@@ -41,6 +41,10 @@ section {
     padding: 0;
   }
 
+  &:last-child {
+    padding: 0;
+  }
+
   &:nth-child(2n) {
     background-color: $pink;
     color: $yellow-light;

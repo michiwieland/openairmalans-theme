@@ -1,14 +1,14 @@
 <article class="single-news">
 
+	<header>
+		<h2>{{ post.title }}</h2>
+	</header>
+
 	<div class="post-thumbnail">
 		<a href="{{ post.link }}">
 			<img src="{{ post.thumbnail.src('neocode-featured-image')|resize(1000, 600, 'center') }}" alt="{{ post.title }}">
 		</a>
 	</div>
-
-	<header>
-		<h2>{{ post.title }}</h2>
-	</header>
 
 	<div class="content">
 			{{ post.get_content() }}
