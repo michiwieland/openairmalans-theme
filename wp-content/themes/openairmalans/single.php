@@ -9,4 +9,5 @@ $impressum_args = array(
 );
 
 $context['posts'] = Timber::get_posts();
+$context['impressum'] = Timber::get_posts( $impressum_args );
 Timber::render('single.twig', $context);
