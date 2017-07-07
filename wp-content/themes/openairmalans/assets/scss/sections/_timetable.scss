@@ -45,8 +45,14 @@
         text-align:left;
         break-inside: avoid;
 
+
+
         &:nth-child(1) {
-          width: 7.5rem;
+          width: 7.2rem;
+
+          @media #{$medium} {
+            width: 4.5rem;
+          }
         }
 
       }
