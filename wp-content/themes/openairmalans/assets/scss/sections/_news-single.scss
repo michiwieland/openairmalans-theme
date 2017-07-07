@@ -41,5 +41,10 @@
 
   .content {
     margin-bottom: 1rem;
+    color: $yellow-light;
+
+    a {
+      color: $yellow;
+    }
   }
 }
