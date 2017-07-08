@@ -41,7 +41,7 @@ $infos_args = array(
 	'post_type' => 'infos',
 	'posts_per_page' => -1,
 	'order' => 'ASC',
-	'orderby' => 'menu_order',
+	'orderby' => 'title',
 );
 
 // Grab latest news

@@ -87,6 +87,13 @@ class PluginDependencies {
         'required'  => true
       ),
 
+			// Google Analytics
+  		array(
+  			'name'      => 'Google Analyticator',
+  			'slug'      => 'google-analyticator',
+  			'required'  => true
+  		),
+
   	);
 
   	tgmpa( $plugins );
