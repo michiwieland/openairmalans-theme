@@ -9,6 +9,11 @@
     flex: 0 1 38%;
   }
 
+  > img {
+    width: 100%;
+    height: auto;
+  }
+
   > .overlay {
     @include custom-font('Ranga', cursive);
     font-size: 1.5rem;
