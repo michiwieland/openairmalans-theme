@@ -5,8 +5,8 @@
     flex: 0 1 100%;
   }
 
-  > header > a {
-    color: $yellow;
+  > header {
+    background-color: inherit;
   }
 
   .post-thumbnail {
@@ -30,8 +30,8 @@
   }
 
   .read-more {
+    color: $green-light;
     margin-top: 0.5rem;
     display: block;
-    color: $yellow;
   }
 }

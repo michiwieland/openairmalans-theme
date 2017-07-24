@@ -1,7 +1,5 @@
 /* FRONT */
 .front {
-  background: $yellow;
-  color: $pink;
   height: calc(100vh - #{$nav_height});
 
   .inner {
@@ -17,7 +15,7 @@
       position: absolute;
       top: 2rem;
       right: 2rem;
-      background: $pink;
+      background: $red;
       width: 9rem;
       height: 9rem;
       padding: 0.5rem;
@@ -34,7 +32,7 @@
       }
 
       > a {
-        color: $yellow;
+        color: $secondary;
       }
     }
   }

@@ -1,6 +1,6 @@
 /* TIMETABLE */
 .timetable-key {
-  color: $yellow;
+  color: $primary;
   margin-left: 0.5rem;
 
   > li {
@@ -11,16 +11,8 @@
 
 .timetable {
   flex: 1 1 40%;
-  border: 0.2rem solid $pink;
-  outline: 0.2rem solid $yellow;
-
-  > header {
-     background: $yellow;
-
-     > h2 {
-       color: $pink;
-     }
-  }
+  border: 0.2rem solid $white;
+  outline: 0.2rem solid $primary;
 
   @media #{$medium} {
     flex: 1 1 100%;
@@ -31,12 +23,11 @@
     width: 100%;
 
     > li {
-      color: $yellow;
+      background: $green-light;
       display:table-row;
 
       &:nth-child(even) {
-        background: $yellow;
-        color: $pink;
+        background: $white;
       }
 
       > span {
@@ -44,8 +35,6 @@
         display:table-cell;
         text-align:left;
         break-inside: avoid;
-
-
 
         &:nth-child(1) {
           width: 7.2rem;

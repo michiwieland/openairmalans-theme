@@ -2,17 +2,9 @@
 .ticket {
   text-align: center;
   flex: 1 1 25%;
+  border: 0.2rem solid $white;
+  outline: 0.2rem solid $primary;
 
-  border: 0.2rem solid $yellow;
-  outline: 0.2rem solid $pink;
-
-  > header {
-     background: $pink;
-
-     > h2 {
-       color: $yellow-light;
-     }
-  }
 
   @media #{$medium} {
     flex: 1 1 100%;
@@ -20,7 +12,7 @@
 
   .price {
     font-size: 4rem;
-    color: $pink;
+    color: $white;
     margin-top: 1rem;
   }
 

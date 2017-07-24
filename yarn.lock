@@ -442,7 +442,7 @@ find-up@^1.0.0:
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"
   dependencies:
     path-exists "^2.0.0"
-    pinkie-promise "^2.0.0"
+    blueie-promise "^2.0.0"
 
 findup-sync@^0.4.2:
   version "0.4.3"
@@ -1062,7 +1062,7 @@ load-json-file@^1.0.0:
     graceful-fs "^4.1.2"
     parse-json "^2.2.0"
     pify "^2.0.0"
-    pinkie-promise "^2.0.0"
+    blueie-promise "^2.0.0"
     strip-bom "^2.0.0"
 
 lodash._basecopy@^3.0.0:
@@ -1498,7 +1498,7 @@ path-exists@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-2.1.0.tgz#0feb6c64f0fc518d9a754dd5efb62c7022761f4b"
   dependencies:
-    pinkie-promise "^2.0.0"
+    blueie-promise "^2.0.0"
 
 path-is-absolute@^1.0.0:
   version "1.0.1"
@@ -1524,7 +1524,7 @@ path-type@^1.0.0:
   dependencies:
     graceful-fs "^4.1.2"
     pify "^2.0.0"
-    pinkie-promise "^2.0.0"
+    blueie-promise "^2.0.0"
 
 performance-now@^0.2.0:
   version "0.2.0"
@@ -1534,15 +1534,15 @@ pify@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
 
-pinkie-promise@^2.0.0:
+blueie-promise@^2.0.0:
   version "2.0.1"
-  resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
+  resolved "https://registry.yarnpkg.com/blueie-promise/-/blueie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
   dependencies:
-    pinkie "^2.0.0"
+    blueie "^2.0.0"
 
-pinkie@^2.0.0:
+blueie@^2.0.0:
   version "2.0.4"
-  resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
+  resolved "https://registry.yarnpkg.com/blueie/-/blueie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
 postcss-value-parser@^3.2.3:
   version "3.3.0"

@@ -2,10 +2,13 @@
   flex: 1 1 100%;
   max-width: 70%;
   margin: 2rem auto 0;
-  background: $pink;
-  color: $yellow;
+  background: $primary;
+  color: $secondary;
   padding: 2rem;
 
+  &:first-of-type {
+    margin-top: 0;
+  }
 
   &:last-of-type {
     border-bottom: none;
@@ -41,10 +44,10 @@
 
   .content {
     margin-bottom: 1rem;
-    color: $yellow-light;
+    color: $grey;
 
     a {
-      color: $yellow;
+      color: $secondary;
     }
   }
 }

@@ -1,7 +1,7 @@
 /*GENERAL */
 body {
-  background-color: $yellow;
-  color: $pink;
+  background-color: $background-color;
+  color: $text-color;
   @include custom-font('Raleway', sans-serif);
 }
 
@@ -46,32 +46,7 @@ section {
   }
 
   &:nth-child(2n) {
-    background-color: $pink;
-    color: $yellow-light;
-
-    h1 {
-      color: $yellow;
-
-      span:before,
-      span::after {
-        border-color: $yellow;
-      }
-    }
-
-    a {
-      color: $yellow;
-    }
-
-    .button {
-      background-color: $yellow;
-      color: $pink;
-
-      &:hover {
-        background-color: $pink;
-        color: $yellow;
-        border: 0.1rem solid $yellow;
-      }
-    }
+    background-color: $background-color-even;
   }
 }
 
@@ -83,6 +58,8 @@ article {
     font-size: 1.2rem;
     text-align: center;
     padding: 1rem;
+    background: $primary;
+    color: $secondary;
   }
 
   > .content {
@@ -103,38 +80,41 @@ h1, h2, nav {
 }
 
 h1 {
-  color: $pink;
+  color: $primary;
   font-size: 3rem;
   margin-bottom: 1rem;
   overflow: hidden;
 	text-align: center;
-}
 
-h1 span {
-  position: relative;
-}
+  span {
+    position: relative;
 
-h1 span:before,
-h1 span::after {
-  content: "";
-  border: 0.1rem;
-  border-style: solid;
-  border-color: $pink;
-	position: absolute;
-  top: 50%;
-	width: $max-width;
-}
-h1 span:before {
-  margin-right: .5em;
-  right: 100%;
-}
-h1 span:after {
-  left: 100%;
-  margin-left: .5em;
+    &:before,
+    &:after {
+      content: "";
+      border: 0.1rem;
+      border-style: solid;
+      border-color: $primary;
+    	position: absolute;
+      top: 50%;
+    	width: $max-width;
+    }
+
+    &:before {
+      margin-right: .5em;
+      right: 100%;
+    }
+
+    &:after {
+      left: 100%;
+      margin-left: .5em;
+    }
+  }
 }
 
 a {
-  color: $pink;
+  color: $primary;
+  font-weight: bold;
   outline: none;
   text-decoration: none;
 }
