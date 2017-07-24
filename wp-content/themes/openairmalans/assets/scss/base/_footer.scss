@@ -4,5 +4,9 @@ body > footer {
   > .inner {
     display: flex;
     justify-content: space-between;
+
+    a {
+      color: $green;
+    }
   }
 }

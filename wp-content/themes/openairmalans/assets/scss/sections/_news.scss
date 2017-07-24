@@ -7,6 +7,13 @@
 
   > header {
     background-color: inherit;
+
+    a {
+      color: $grey-dark;
+      
+    }
+
+
   }
 
   .post-thumbnail {
@@ -30,7 +37,6 @@
   }
 
   .read-more {
-    color: $green-light;
     margin-top: 0.5rem;
     display: block;
   }
