@@ -1,6 +1,6 @@
 /*GENERAL */
 body {
-  background-color: $background-color;
+  background-color: $secondary;
   color: $text-color;
   @include custom-font('Raleway', sans-serif);
 }
@@ -44,10 +44,6 @@ section {
   &:last-child {
     padding: 4.5rem 0 0
   }
-
-  &:nth-child(2n) {
-    background-color: $background-color-even;
-  }
 }
 
 article {
@@ -59,7 +55,7 @@ article {
     text-align: center;
     padding: 1rem;
     background: $primary;
-    color: $secondary;
+    color: $link;
   }
 
   > .content {
@@ -113,7 +109,7 @@ h1 {
 }
 
 a {
-  color: $red;
+  color: $link;
   font-weight: bold;
   outline: none;
   text-decoration: none;

@@ -1,7 +1,7 @@
 /* BUTTON */
 .button {
   background: $primary;
-  color: $secondary;
+  color: $link;
   font-weight: bold;
   border: 0.1rem solid $primary;
   display: block;
@@ -21,7 +21,7 @@
 
 /* LIGTHBOX */
 .lity-wrap {
-  color: $secondary;
+  color: $link;
   width: 90%;
   height: 100%;
   padding: 5em;
@@ -33,7 +33,7 @@
   }
 
   .lity-title {
-    color: $secondary;
+    color: $link;
     text-align: center;
     margin-bottom: 2rem;
   }

@@ -3,7 +3,7 @@
   max-width: 70%;
   margin: 2rem auto 0;
   background: $primary;
-  color: $secondary;
+  color: $text-color-dark;
   padding: 2rem;
 
   &:first-of-type {
@@ -44,10 +44,10 @@
 
   .content {
     margin-bottom: 1rem;
-    color: $grey;
+    color: $text-color-dark;
 
     a {
-      color: $green-light;
+      color: $secondary;
     }
   }
 }

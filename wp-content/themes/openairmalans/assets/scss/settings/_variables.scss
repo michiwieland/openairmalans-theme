@@ -1,26 +1,19 @@
 /* Colors */
 $black: #000000;
 $white: #FFFFFF;
-$grey-darker: #DAD8D5;
 $grey: #EFEDEA;
 $grey-dark: #222222;
 $yellow: #FFBF3B;
 $red: #CF0A2C;
-$blue: #3A768E;
-$blue-light: #59B6DB;
 $green: #005155;
 $green-light: #59dbd5;
-$silver: #b8cac3;
 
-
-$header: $green;
 $primary: $green;
-$secondary: $white;
+$secondary: $green-light;
 $text-color: $grey-dark;
-$background-color: $green-light;
-$background-color-even: $grey;
-$color-even: $red;
-$accent-color: $blue-light;
+$text-color-dark: $grey;
+$accent-color: $red;
+$link: $grey;
 
 /* Device Width */
 $phablet-width: 30em;

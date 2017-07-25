@@ -6,14 +6,10 @@
   }
 
   > header {
-    background-color: inherit;
-
     a {
-      color: $grey-dark;
-      
+      color: $primary;
     }
-
-
+    background-color: inherit;
   }
 
   .post-thumbnail {

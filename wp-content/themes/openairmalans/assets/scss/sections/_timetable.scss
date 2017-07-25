@@ -22,12 +22,11 @@
     width: 100%;
 
     > li {
-      color: $grey-dark;
-      background: $grey;
       display:table-row;
 
       &:nth-child(even) {
-        background: $grey-darker;
+        background: $primary;
+        color: $text-color-dark;
       }
 
       > span {

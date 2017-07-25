@@ -15,7 +15,7 @@
       position: absolute;
       top: 2rem;
       right: 2rem;
-      background: $red;
+      background: $accent-color;
       width: 9rem;
       height: 9rem;
       padding: 0.5rem;
@@ -29,10 +29,6 @@
         width: 7rem;
         height: 7rem;
         font-size: 70%;
-      }
-
-      > a {
-        color: $secondary;
       }
     }
   }
