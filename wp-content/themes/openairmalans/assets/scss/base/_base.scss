@@ -36,6 +36,7 @@ main {
 section {
   text-align: center;
   padding: 4.5rem 0;
+  position: relative;
 
   &:first-child {
     padding: 0;
@@ -43,6 +44,22 @@ section {
 
   &:last-child {
     padding: 4.5rem 0 0
+  }
+
+  &:nth-child(2n) {
+    background: $background-dark;
+
+    &:before {
+    	content: '';
+    	position: absolute;
+    	top: -25px;
+    	left: 0;
+    	right: 0;
+      height: 60px;
+	    background-size: 15px 48px;
+    	background-repeat: repeat-x;
+    	background-image: linear-gradient(312deg,transparent 34%,$green-light 34%, $green-light 66%,transparent 66%)
+    }
   }
 }
 
