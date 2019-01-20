@@ -86,6 +86,13 @@ class PluginDependencies {
         'slug'      => 'timber-library',
         'required'  => true
       ),
+		
+		// A plugin to become GDPR/DSGVO compliant.
+      array(
+        'name'      => 'GDPR Cookie Consent',
+        'slug'      => 'cookie-law-info',
+        'required'  => true
+      ),
 
 			// Google Analytics
   		array(
